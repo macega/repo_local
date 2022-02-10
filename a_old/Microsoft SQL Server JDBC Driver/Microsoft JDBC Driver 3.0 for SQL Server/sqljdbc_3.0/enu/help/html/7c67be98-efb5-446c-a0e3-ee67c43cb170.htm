@@ -1,0 +1,175 @@
+﻿<html DIR="LTR" xmlns:tool="http://www.microsoft.com/tooltip" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>SQLXML Interface</title>
+    
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css">
+      
+    </link>
+    
+    <script src="../local/script.js">
+      
+    </script><script src="../local/script_main.js">&amp;nbsp;</script>
+  </head>
+  <body>
+    <!--Topic built:03/26/2010 02:49:39-->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable"><tr>
+          <td align="left">
+            <span id="headerBold">SQLXML Interface</span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr></table>
+      
+      
+      
+    </div>
+    <div id="mainSection">
+      
+        
+        
+    <font color="DarkGray">
+      
+    </font>
+    <p />
+    
+    <p />
+  
+        <div id="introductionSection" class="section">
+    <p>Starting with the Microsoft SQL Server JDBC Driver version 2.0, the JDBC driver provides support for the JDBC 4.0 API, which introduces the java.sql.SQLXML interface. The SQLXML interface defines methods to interact and manipulate XML data. The <b>SQLXML</b> data type maps to the SQL Server <b>xml</b> data type.</p>
+    <p>The SQLXML interface provides methods for accessing the XML value as a <b>String</b>, a <b>Reader</b> or <b>Writer</b>, or as a <b>Stream</b>. The XML value may also be accessed through a <b>Source</b> or set as a <b>Result</b>, which are used with XML Parser APIs such as Document Object Model (DOM), Simple API for XML (SAX), and Streaming API for XML (StAX), as well as with XSLT transforms and XPath. </p>
+    <p>The following table describes the methods defined in the SQLXML interface: </p>
+    <table width="100%" cellspacing="0" cellpadding="0" border="1" style="background-color: #CCCCCC;"><tr>
+          <th>
+            Method Syntax
+          </th>
+          <th>
+            Method Description
+          </th>
+        </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131685" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">void free()</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>This method frees the SQLXML object and releases the resources that it holds.</p>
+        </td>
+      </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131754" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">InputStream getBinaryStream ()</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>Returns an input stream to read data from the SQLXML.</p>
+        </td>
+      </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131755" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Reader getCharacterStream ()</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>Returns the <b>XML</b> data as a <b>java.io.Reader</b> object or as a stream of characters.</p>
+        </td>
+      </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131756" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">T extends Source T getSource (Class&lt;T&gt; sourceClass )</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>Returns a <b>Source</b> for reading the <b>XML</b> value specified by this <b>SQLXML</b> object.</p>
+          <div style="margin: .5em 1.5em .5em 1.5em"><b>Note: </b>
+            The <b>getSource</b> method supports the following sources: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource, and java.io.InputStream.<p />
+          </div>
+        </td>
+      </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131757" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">String getString ()</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>Returns a string representation of the <b>XML</b> value designated by this SQLXML object.</p>
+        </td>
+      </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131758" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">OutputStream setBinaryStream ()</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>Retrieves a stream that can be used to write the <b>XML</b> value that this SQLXML object represents.</p>
+        </td>
+      </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131759" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Writer setCharacterStream ()</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>Returns a stream to be used to write the <b>XML</b> value that this SQLXML object represents.</p>
+        </td>
+      </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131760" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">T extends Result T setResult (Class&lt;T&gt; resultClass )</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>Returns a <b>Result</b> for setting the <b>XML</b> value specified by this <b>SQLXML</b> object. </p>
+          <div style="margin: .5em 1.5em .5em 1.5em"><b>Note: </b>
+            The <b>setResult</b> method supports the following sources: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult, and java.io.OutputStream.<p />
+          </div>
+        </td>
+      </tr><tr>
+        <td>
+          <p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=131762" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">void setString (String value)</linkText></a>
+          </p>
+        </td>
+        <td>
+          <p>Sets the XML value designated by this SQLXML object to the specified <b>String</b> representation.</p>
+        </td>
+      </tr></table>
+    <p>The applications can read and write XML values to or from an SQLXML object only once. </p>
+    <p>When the <b>free()</b> method is called, a SQLXML object becomes invalid and is neither readable nor writeable. If the application tries to invoke a method on that SQLXML object other than the <b>free()</b> method, an exception is thrown. </p>
+    <p>The SQLXML object becomes neither readable nor writable when the application calls any of the following getter methods: <b>getSource</b>, <b>getCharacterStream</b>, <b>getBinaryStream</b>, and <b>getString</b>.</p>
+    <p>The SQLXML object becomes neither writeable nor readable when the application calls any of the following setter methods: <b>setResult</b>, <b>setCharacterStream</b>, <b>setBinaryStream</b>, and <b>setString</b>.</p>
+  </div><span id="seeAlsoSpan"><h1 class="heading">See Also</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection"><a href="32b7217e-1f0c-473d-9a45-176daa81584e.htm">Supporting XML Data</a><br /><br /></div><!--[if gte IE 5]>
+			<tool:tip element="seeAlsoToolTip" avoidmouse="false"/><tool:tip element="languageFilterToolTip" avoidmouse="false"/><tool:tip element="roleInfoSpan" avoidmouse="false"/>
+		<![endif]-->
+      <div id="footer" class="section">
+        
+		<hr />
+		
+		<span id="fb" class="feedbackcss">
+			
+			
+		</span>
+		
+		<a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">
+			
+			© 2010 Microsoft Corporation. All rights reserved.
+		</a>
+ 	
+	
+      </div>
+    </div>
+  </body>
+</html>

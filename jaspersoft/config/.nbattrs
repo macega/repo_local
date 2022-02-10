@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="">
+        <attr name="FormDesignerPalette\J2EEComponents\QueryListResult.palette_item\position" intvalue="300"/>
+        <attr name="FormDesignerPalette\SwingContainers\position" intvalue="-100"/>
+        <attr name="FormDesignerPalette\SwingControls\position" intvalue="50"/>
+        <attr name="FormDesignerPalette\SwingWindows\position" intvalue="325"/>
+        <attr name="FormDesignerPalette\_Layouts_only_for_internal_use_\position" intvalue="175"/>
+        <attr name="Services\DiffProviders\org-netbeans-modules-diff-builtin-provider-BuiltInDiffProvider.settings\position" intvalue="100"/>
+    </fileobject>
+</attributes>

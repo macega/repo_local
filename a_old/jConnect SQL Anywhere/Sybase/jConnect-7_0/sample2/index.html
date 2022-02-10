@@ -1,0 +1,984 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (X11; I; SunOS 5.6 sun4u) [Netscape]">
+   <title>jConnect Sample Programs</title>
+<!-- OWNER_NAME="Lance J. Andersen" -->
+<link rev="made" href="mailto:lancea@sybase.com">
+<!-- OWNER_INFO="sybase" -->
+<script  language=JavaScript>
+<!-- Hiding
+     function MakeArray(n) {
+        this.length = n;
+        for (var i = 0; i < n; i++) {
+        this[i] = 0 }
+        return this
+   
+     }
+
+     function DisplayDocDate(month, day, year) {
+        months = new MakeArray(12)
+        months[0] = "January"
+        months[1] = "February"
+        months[2] = "March"
+        months[3] = "April"
+        months[4] = "May"
+        months[5] = "June"
+        months[6] = "July"
+        months[7] = "August"
+        months[8] = "September"
+       months[9]= "October"
+        months[10]= "November"
+        months[11]= "December"
+        document.write(" Last Modified: ",months[month],
+        " ", day, ",", " 20" + year );
+
+
+     }
+// -->
+</script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#05736E" vlink="#4B0B7F">
+<!-- OWNER_NAME="Lance J. Andersen" --><link rev="made" href="mailto:lancea@sybase.com"><!-- OWNER_INFO="sybase" -->
+<h1>
+<font color="#000080"><font size=+4>jConnect Sample Programs</font></font></h1>
+This directory contains the source code for several sample programs that
+demonstrate how to use various JDBC classes and methods with jConnect.
+All of these samples are compatible with SQL Server.
+<p><b>NOTE</b>: These samples are intended for demonstration purposes only.
+<h2>
+<b><font color="#000080"><font size=+2>Compiling the Samples</font></font></b></h2>
+
+
+<UL>
+<DT>
+You can compile the samples within the sample
+directory using the following commands:</DT>
+</UL>
+
+<UL>
+<DT>
+<B>WinNT/95 (from a DOS prompt):</B></DT>
+<ul><dt>
+<BR>javac -d %JDBC_HOME%\classes
+<BR>-classpath .;%JDBC_HOME%\classes\jconn4.jar;%JDBC_HOME%\classes *.java
+</dt></ul><p>
+<ul>OR</ul>
+<ul><dt>
+<BR> <b>make_nt all</b> - You must have JAVA_HOME and JDBC_HOME defined in
+       order to use this makefile
+</dt></ul>
+<p>
+
+<DT>
+<B>UNIX:</B></DT>
+<ul><dt>
+<BR>javac -d $JDBC_HOME/classes
+<BR>-classpath .:$JDBC_HOME/classes/jconn4.jar:$JDBC_HOME/classes *.java<br>
+</dt></ul><p>
+<ul>OR</ul>
+<ul><dt>
+<BR> <b>make all</b> - You must have JAVA_HOME and JDBC_HOME defined in
+           order to use this makefile
+</dt></ul>
+</UL>
+<H2>
+<B><FONT COLOR="#000080"><FONT SIZE=+2>Running the Samples</FONT></FONT></B></H2
+>
+
+<b>As an Application</b><br>
+<UL>
+<DT>
+Add these entries to your CLASSPATH variable: $JDBC_HOME/classes/jconn4.jar and
+$JDBC_HOME/classes (%JDBC_HOME%/classes/jconn4.jar and %JDBC_HOME%/classes 
+respectively for Windows NT, Windows 9x, DOS)
+After compiling the samples, run them on the command line using the following
+commands:</DT>
+
+
+<P>java sample2.SybSample &lt;SampleName&gt [&lt;command line options&gt]<p>
+<DT>
+ For example:
+<pre>java sample2.SybSample ReadCursor -U guest -P sybase -S jdbc:sybase:Tds:myserver:5555</pre></DT>
+</UL>
+
+<UL>
+<DT>
+<B>NOTE:</B> All of the sample programs use the Sybase SQL Server outside
+the firewall. This allows you to run the samples without any command line
+options. If you want to include your own command line options, the comments
+at the top of each sample code specify options that the sample expects,
+as well as the database to use (e.g., pubs2 or a writeable db tempdb).</DT>
+
+</UL>
+
+<h2>
+<font color="#000080">Sample Driver Interface</font></h2>
+
+<ul>
+<dt>
+The sample driver is a GUI interface which allows you to view the source
+files, and the execution output when running the samples. The interface
+consists of a connection, sample panel, and a sample output area.</dt>
+
+<dt>
+The connection panel displays information about the current connection
+properties,&nbsp; these are text editable fields. You may simply change
+the values within the user, password, and url fields to pertain to your
+own server, and select the RUN SAMPLE button at the bottom of the screen.</dt>
+
+<p><br>The sample panel consists of the sample name that you are running
+as well as a text area displaying the sample source code through a scrollable
+window.&nbsp; These are not text editable fields, in order to change the
+current running sample, you must use the File menu, Open Sample option.
+If you are accessing the applets remotely, you will not be able to view
+the file directory on the remote machine. All you need to do is enter a
+sample Name, and the Open File option will open that sample file if it
+exists.
+<p>The sample output displays any output that the sample program has been
+defined to display.
+<dt>
+The status area, is meant to display any extra information, such as current
+status of execution, and any errors that you may have encountered during
+execution, such as a bad connection, or the inability to find a sample.</dt>
+</ul>
+
+<h2>
+<font color="#000080">Executable Samples</font></h2>
+The following is a list of the executable samples that are available, with
+a description of each program.
+<table BORDER WIDTH="100%" >
+<tr>
+<td><b><a href="AsciiStream.java">AsciiStream.java</a></b></td>
+
+<td>Demonstrates the setAsciiStream and getAsciiStream methods.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="AsciiStream"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="AutoCommit.java">AutoCommit.java</a></b></td>
+
+<td>Demonstrates the getAutoCommit, setAutoCommit, rollback, and commit
+methods.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="AutoCommit"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="BinaryStream.java">BinaryStream.java</a></b></td>
+
+<td>Demonstrates the setBinaryStream and getBinaryStream methods.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="BinaryStream"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="Callable.java">Callable.java</a></b></td>
+
+<td>Demonstrates how a callable statement is executed, including creating
+stored procedures. See <a href="#PUBS2">pubs2_sql.sql</a> to execute on
+your local server.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="Callable"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="DBMetadata.java">DBMetadata.java</a></b></td>
+
+<td>Demonstrates the DatabaseMetaData methods. Displays output for all
+of the DatabaseMetaData methods. Use the -M option to specify a specific
+method.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="DBMetadata"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="DebugExample.java">DebugExample.java</a></b></td>
+
+<td>Demonstrates how to specify the Debug Properties <b>sybDebug</b> and
+<b>sybLogStream</b>.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes 
+    	width=38 height=28><param name=sample value="DebugExample"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="DriverMgr.java">DriverMgr.java</a></b></td>
+
+<td>Demonstrates how to use the DriverManager class.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="DriverMgr"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="Encrypt.java">Encrypt.java</a></b></td>
+
+<td>Encrypt class demonstrates how to use the custom socket feature with
+jConnect using SSL implementation of javax.net.SSLSocket, and javax.net.SSLSocketFactory.
+See <a href="#MySSL">MySSLSocketFactory.java </a>on how this is done.&nbsp;
+<p><b>NOTE:</b> jConnect with SSL is for Java client applications that
+need to establish a secure connection with a server. Currently, no Sybase
+servers support SSL. Support is planned for future Sybase products. An
+applet that needs a secure connection should use an HTTPS gateway.&nbsp;</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><b><a href="Escape.java">Escape.java</a></b></td>
+
+<td>Demonstrates the jConnect Escape syntax</td>
+
+<td><applet 
+   	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="Escape"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="Execute.java">Execute.java</a></b></td>
+
+<td>Demonstrates the execute method</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="Execute"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="ExecuteQuery.java">ExecuteQuery.java</a></b></td>
+
+<td>Demonstrates the executeQuery method</td>
+
+<td><applet 
+  	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="ExecuteQuery"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="ExecuteQueryNumeric.java">ExecuteQueryNumeric.java</a></b></td>
+
+<td>Demonstrates how to process arithmetic overflow warnings</td>
+
+<td><applet 
+  	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="ExecuteQueryNumeric"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="ExecuteUpdate.java">ExecuteUpdate.java</a></b></td>
+
+<td>Demonstrates the executeUpdate method</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="ExecuteUpdate"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="GetObject.java">GetObject.java</a></b></td>
+
+<td>Demonstrates the GetObject method. This example checks to see if a
+timestamp datatype is returned</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="GetObject"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="HandleObject.java">HandleObject.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to insert, update and select objects from a backend
+that supports native serialization of Java objects (ASA 6.0.0.1, ASE 12.0,
+or higher) The <a href="Address.java">Address object</a>
+needs to be installed on the server. This can not run as an applet right
+now.</td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="Isql.java">Isql.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>A sample utility, that allows the user to enter command line options,
+to access a sql server, much like you would using isql.</td>
+
+<td><b><a href="gateway.html">Run&nbsp;</a></b></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="IsqlApp.java">IsqlApp.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>A sample utility, that allows the user to enter command line options,
+to access a sql server, much like you would using isql. You cannot run
+this from an applet, this is command line only. java IsqlApp [options]</td>
+</tr>
+
+<tr>
+<td><b><a href="JdbcDriver.java">JdbcDriver.java</a></b></td>
+
+<td>Demonstrates how to use the <b>jdbc.drivers'</b> system properties
+to load the jConnect driver. Can't run as applet.&nbsp;</td>
+</tr>
+
+<TR>
+<td><b><a href="LoaderSample.java">LoaderSample.java</a></b></td>
+
+<TD>Demonstrates how to use the Dynamic Class Loading using the
+<strong>CLASS_LOADER property</strong>. This sample only works with ASE 12 
+and ASA 6 and above.  Please refer to the comments in the source 
+of LoaderSample for what needs to be installed on 
+the backend database.</td><td>&nbsp;</TD>
+</TR>
+
+<tr>
+<td>
+<dt>
+<b><a href="MessageHandler.java">MessageHandler.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to use message callbacks as you can in CTLIB.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="MessageHandler"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="MyCallable.java">MyCallable.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to use a CallableStatement.&nbsp; See <a href="#PUBS2">pubs2_sql.sql</a>
+to execute on your local server.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="MyCallable"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="MyConnection.java">MyConnection.java</a></b></dt>
+</td>
+
+<td>Demonstrates how to use the Connection methods.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="MyConnection"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="MyDriver.java">MyDriver.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates the Driver and DriverPropertyInfo classes.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="MyDriver"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="MyPrepare.java">MyPrepare.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to use a PreparedStatement.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="MyPrepare"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="MyResultSet.java">MyResultSet.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to use a ResultSet object.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="MyResultSet"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="NameBindRPC.java">NameBindRPC.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to execute a stored procedure using name binding.&nbsp;
+See <a href="#PUBS2">pubs2_sql.sql</a> to execute on your local server.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="NameBindRPC"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="Ping.java">Ping.java</a></b></td>
+
+<td>Sample utility that demonstrates the ability to "ping" - check if a
+machine is alive by successfully connecting to it. Connects to the Sybase
+Server outside our firewall.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="Ping"></applet></td>
+</tr>
+
+<TR>
+<td><b><a href="PreLoadSample.java">PreLoadSample.java</a></b></td>
+
+<TD>Demonstrates how to use the Dynamic Class Loading using the
+<strong>CLASS_LOADER  and PRELOAD_JARS properties</strong>. 
+This sample only works with ASE 12
+and ASA 6 and above.  Please refer to the comments in the source
+of LoaderSample for what needs to be installed on
+the backend database.</td><td>&nbsp;</TD>
+</TR>
+
+<tr>
+<td>
+<dt>
+<b><a href="Prepare.java">Prepare.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how a prepared statement is handled.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="Prepare"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="PrintExample.java">PrintExample.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to process the T-SQL print command.&nbsp; See <a href="#PUBS2">pubs2_sql.sql</a>
+to execute on your local server.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="PrintExample"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="RSMetadata.java">RSMetadata.java</a></b></td>
+
+<td>Demonstrates how to use ResultSetMetaData methods.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="RSMetadata"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="Raiserror.java">Raiserror.java</a></b></td>
+
+<td>Demonstrates how to process raiserror messages that are raised as SQLExceptions.
+See <a href="#PUBS2">pubs2_sql.sql</a> to execute on your local server.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="Raiserror"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="ReadCursor.java">ReadCursor.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to use a read only cursor.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="ReadCursor"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="ScrollableSample.java">ScrollableSample.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates the use of the ExtendedResultSet class which is used to provide support for Scrollable cursors.</td>
+
+<td><applet
+        code=sample.SybSampleApplet.class
+        codebase=/classes
+        width=38 height=28><param name=sample value="ScrollableSample"></applet></td>
+</tr>
+
+
+<tr>
+<td>
+<dt>
+<b><a href="SetObject.java">SetObject.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates the setObject method.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="SetObject"></applet></td>
+</tr>
+
+<tr>
+<td><b><a href="EventHandler.java">EventHandler.java</a></b></td>
+
+<td>Demonstrates the use of the SybEventHandler class to create an event
+handler for a Connection to a Sybase Open Server. ( This sample registers
+a stored procedure out on the server to prepare to listen for and handle
+events). Can't run as applet.&nbsp;</td>
+
+<td><!-- 
+<TD><APPLET
+        code=sample.Eventndler.javaHandler.class
+        codebase=/classes
+        width=38 height=28>
+        <PARAM name=sample value="EventHandler">
+</APPLET></TD>
+--></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="SimpleSelect.java">SimpleSelect.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Describes how to create and execute a simple select statement.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="SimpleSelect"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="SybEedInfo.java">SybEedInfo.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to use the SybSQLException class which extends SQLException
+and the SybSQLWarning class which extends SQLWarnings.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="SybEedInfo"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="SybTimestamp.java">SybTimestamp.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to process a Sybase timestamp datatype via an Output
+Parameter of a CallableStatement&nbsp;&nbsp; See <a href="#PUBS2">pubs2_sql.sql</a>
+to execute on your local server.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="SybTimestamp"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="TextPointers.java">TextPointers.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>A sample, that shows how to use the TextPointer class to insert blobs
+the fast way. It's MUCH faster than using BinaryStream. And the usage is
+pretty easy. Caution: This sample does NOT run against SQL Anywhere!
+Note:For TextPointer sample to run you need to enable the
+select into/bulkcopy dboption. To do this use the below command :
+sp_dboption DBName,"select into/bulkcopy",true.
+&nbsp;</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="UnicodeStream.java">UnicodeStream.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates the setUnicodeStream and getUnicodeStream methods.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="UnicodeStream"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="UpdateCursor.java">UpdateCursor.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>Demonstrates how to use multiple cursors at the same time.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="UpdateCursor"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="Validate.java">Validate.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>A sample utility that allows you to validate that your jdbc driver
+is working correctly by displaying driver version information and establishing
+a connection to a Sybase server.</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="Validate"></applet></td>
+</tr>
+
+<tr>
+<td>
+<dt>
+<b><a href="Version.java">Version.java</a></b></dt>
+
+<br>&nbsp;</td>
+
+<td>A sample utiltity that displays the driver's version string, as well
+as if the driver contains an expiration date.&nbsp;</td>
+
+<td><applet 
+    	code=sample.SybSampleApplet.class 
+    	codebase=/classes
+    	width=38 height=28><param name=sample value="Version"></applet></td>
+</tr>
+</table>
+
+<dl>
+<dt>
+&nbsp;<b><font color="#000080"><font size=+2>Support Classes</font></font></b></dt>
+
+<p><br>The following classes are support classes for the executable samples;
+they are not intended to be executed. You must compile these classes in
+order to run the executable samples.
+<br>&nbsp;
+<table BORDER WIDTH="100%" >
+<caption>&nbsp;</caption>
+
+<tr>
+<td><b><a href="Address.java">Address.java</a></b></td>
+
+<td>This class needs to be compiled, jar'ed und installed on a backend
+that supports native serialization of Java objects in the server (ASE 6.0.0.1,
+ASE 12.0, or higher). This is needed by <b>HandleObject.java</b>. Look
+into its header section or its javadocs to get more information.</td>
+</tr>
+
+<tr>
+<td><b><a href="AsciiToUniFileInputStream.java">AsciiToUniFileInputStream.java</a></b></td>
+
+<td>Assists in reading a byte stream and converting it so that it appears
+to be a unicode stream. This is needed by <b>UnicodeStream.java</b> as
+a support class and is not intended to be run.</td>
+</tr>
+
+<tr>
+<td><b><a href="CommandLine.java">CommandLine.java</a></b></td>
+
+<td>Assists in reading and parsing the command line options within a main
+method of a class. This is especially useful for inserting debugging, user,
+password, and server properties..</td>
+</tr>
+
+<tr>
+<td><b><a href="DataRow.java">DataRow.java</a></b></td>
+
+<td>Stores a row of data values.</td>
+</tr>
+
+<tr>
+<td><b><a href="DataRowCache.java">DataRowCache.java</a></b></td>
+
+<td>An interface for manipulating a cache of DataRow objects.
+<br>&nbsp;Used internally by the Query and ExtendedResultSet objects.</td>
+</tr>
+
+<tr>
+<td><b><a href="Employee.java">Employee.java</a></b></td>
+<td>This class needs to be compiled and placed in the same jar that 
+contains the Person interface.  It then needs to be installed on the backend
+that supports native serialization of Java objects in the server (ASE 6.0.0.1,
+ASE 12.0, or higher). This is needed by <b>LoaderSample.java</b>
+and <strong>PreLoadSample.java</strong>. Refer to the installation
+instructions in the comments in LoaderSample.java or PreLoadSample.java.
+</td>
+</tr>
+
+<tr>
+<td><b><a href="ExtendedResultSet.java">ExtendedResultSet.java</a></b></td>
+
+<td>A class which extends ResultSet in order to provide a means to utilize
+Scrollable ResultSets using JDBC 1.0.x.</td>
+</tr>
+
+<tr>
+<td><a NAME="MySSL"></a><b><a href="MySSLSocketFactory.java">MySSLSocketFactory.java</a></b></td>
+
+<td>Creates a secure Socket and demonstrates how to set cipher suites based
+on connection properties. SSL is needed for encryption, authentication
+and message verification. When jConnect is used with SSL, all TDS communication
+sent to the server is encrypted. See <a href="Encrypt.java">Encrypt.java
+</a>for
+a sample on how to execute/use this SybSocketFactory implementation.&nbsp;
+<p><b>NOTE:</b> jConnect with SSL is for Java client applications that
+need to establish a secure connection with a server. Currently, no Sybase
+servers support SSL. Support is planned for future Sybase products. An
+applet that needs a secure connection should use an HTTPS gateway.&nbsp;
+<p><b>COMPILE NOTE: </b>You will not be able to recompile this class if
+javax.net.ssl package is not in your CLASSPATH. To obtain this, you must
+go to the Sun web site and download them via the JavaWebServer.&nbsp;</td>
+</tr>
+
+<tr>
+<td><b><a href="Person.java">Person.java</a></b></td>
+<td>This interface needs to be compiled and placed in the same jar that 
+contains Employee.  It then needs to be installed on the backend
+that supports native serialization of Java objects in the server (ASE 6.0.0.1,
+ASE 12.0, or higher). This is needed by <b>LoaderSample.java</b>
+and <strong>PreLoadSample.java</strong>. Refer to the installation
+instructions in the comments in LoaderSample.java or PreLoadSample.java.
+</td>
+</tr>
+
+<tr>
+<td><b><a href="Sample.java">Sample.java</a></b></td>
+
+<td>An abstract class subclassed by all of sample programs within the JDBC_HOME/sample2/
+dir It contains various methods used by all samples, as well and the abstract
+sampleCode method, which is defined within each sample in order to implement
+specifically what the sample is trying to demonstrate. This enables the
+code to be clear, and not burdening the user with setup.</td>
+</tr>
+
+<tr>
+<td><b><a href="ScrollableResultSet.java">ScrollableResultSet.java</a></b></td>
+
+<td>An interface used to define the Scrollable ResultSet methods available
+for use by ExtendedResultSet.  ExtendedResultSet implements ScrollableResultSet.
+</td>
+</tr>
+
+<tr>
+<td><b><a href="SQLValue.java">SQLValue.java</a></b></td>
+
+<td>The purpose of this class is to provide a means of storing column values
+of a result set, and to hide the data conversion routines from the perspective
+of the ResultSet interface.&lt;p>&nbsp;</td>
+</tr>
+
+<tr>
+<td><b><a href="SunIoConverter.java">SunIoConverter.java</a></b></td>
+
+<td>This is an impure (but efficient) implementation of <tt>CharsetConverter</tt>
+which relies on the <tt>sun.io</tt> package, especially classes <tt>ByteToCharConverter</tt>
+and <tt>CharToByteConverter</tt>. It may be used with jConnect instead
+of the 100% Pure Java implementation by setting the <tt>CHARSET_CONVERTER_CLASS</tt>
+connection property to <tt>sample2.SunIoConverter</tt>.&nbsp;
+<p><b>NOTE:</b> This class uses classes from the package <tt>sun.io</tt>,
+which may not be present in all Java VMs. JavaSoft is free to change anything
+in the <tt>sun.io</tt> package in future releases. If you decide to use
+this converter or any derivative of it in your application for performance
+reasons, you may need to make code changes in the future if <tt>sun.io</tt>
+changes.</td>
+</tr>
+
+<tr>
+<td><b><a href="SybSample.java">SybSample.java</a></b></td>
+
+<td>Sample driver, allowing the user to run any of the sybase samples except
+IsqlApp, and IsqlApplet from the command line or from an applet and launch
+a GUI application that runs a sample, displays the output, and gives the
+option to open and run another sample.&nbsp;</td>
+</tr>
+
+<tr>
+<td><b><a href="SybSampleApplet.java">SybSampleApplet.java</a></b></td>
+
+<td>Creates an applet, which consists of a run button. When selected it
+instantiates the SybSample class, which is a sample driver application&nbsp;</td>
+</tr>
+</table>
+<a NAME="PUBS2"></a>
+<dt>
+<b><font color="#000080"><font size=+2>Pubs2_sql.sql Script</font></font></b></dt>
+
+<p><br>If you would like to execute the samples using your local server,
+you must include the <b>pubs2_sql.sql</b> script on your server. This script,
+contained in this sample directory, is an extension to the pubs2 database
+which allows you to run some samples that access stored procedures( Callable.java,
+MyCallable.java, Raiserror.java, and SybTimestamp). We have pre-loaded
+this script onto our demo server; therefore you should be able to execute
+all the samples from this applet successfully.
+<br>&nbsp;
+<dt>
+<b><font color="#000080"><font size=+2>SQL Anywhere-compatible Samples</font></font></b></dt>
+
+<p><br>The following samples are compatable with SQL Anywhere. However,
+in order to run them you need to install the <b>pubs2_any.sql</b> script
+onto your SQL Anywhere server. This file is available in the jConnect sample
+directory from where you are viewing this file, and it is intended to create
+a pubs2 database on your sql anywhere server.
+<p>Only the samples listed below are SQL Anywhere-compatible. The other
+samples are not entirely compatible because they include features that
+may not be supported, or do not have the same column names for systables.
+We decided to only provide samples that demonstrate the full range of capabilities
+for SQL Server, rather than simplifying them to work for both platforms.
+We apologize for any inconvenience.
+<table BORDER=3 CELLSPACING=2 CELLPADDING=3 BGCOLOR="#FFF8DC" >
+<tr>
+<td>DBMetatdata.java</td>
+
+<td>DebugExample.java</td>
+
+<td>DriverMgr.java</td>
+
+<td>ExecuteQuery.java</td>
+</tr>
+
+<tr>
+<td>ExecuteUpdate.java</td>
+
+<td>GetObject.java</td>
+
+<td>JdbcDriver.java</td>
+
+<td>MyConnection.java</td>
+</tr>
+
+<tr>
+<td>MyDriver.java</td>
+
+<td>MyResultSet.java</td>
+
+<td>Ping.java</td>
+
+<td>RSMetatdata.java</td>
+</tr>
+
+<tr>
+<td>SetObject.java</td>
+
+<td>SimpleSelect.java</td>
+
+<td>SybEedInfo.java</td>
+
+<td>Validate.java</td>
+</tr>
+
+<tr>
+<td>Version.java</td>
+</tr>
+</table>
+</dl>
+
+<hr>
+<address>
+<script LANGUAGE="JavaScript">        dtm = new Date(document.lastModified)
+        DisplayDocDate(dtm.getMonth(), dtm.getDate(), dtm.getYear() )</script>
+</address>
+
+</body>
+</html>

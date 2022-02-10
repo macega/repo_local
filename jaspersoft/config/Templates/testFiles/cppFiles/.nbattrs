@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="CppUnitRunner.cc">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="class.cc">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="class.h">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="cppsimpletest.cc">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="cppunittest.cc">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="cppunittest.h">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="file">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="file.cc">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="file.h">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="main.cc">
+        <attr name="template" boolvalue="true"/>
+    </fileobject>
+</attributes>

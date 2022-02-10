@@ -1,0 +1,96 @@
+﻿<html DIR="LTR" xmlns:tool="http://www.microsoft.com/tooltip" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>getReference Method (SQLServerDataSource)</title>
+    
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css">
+      
+    </link>
+    
+    <script src="../local/script.js">
+      
+    </script><script src="../local/script_main.js">&amp;nbsp;</script>
+  </head>
+  <body>
+    <!--Topic built:03/26/2010 02:49:39-->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable"><tr>
+          <td align="left">
+            <span id="headerBold">getReference Method (SQLServerDataSource)</span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr></table>
+      
+      
+      
+    </div>
+    <div id="mainSection">
+      
+        
+        
+    <font color="DarkGray">
+      
+    </font>
+    <p />
+    
+    <p />
+  
+        <div id="introductionSection" class="section">
+    <p>Returns a reference to this <a href="097434fd-2b74-411c-a5ed-eba04481dde5.htm">SQLServerDataSource</a> object.</p>
+  </div><h1 class="heading">Syntax</h1><div id="syntaxSection" class="section"><div class="sampleCode"><span codeLanguage="other"><pre>
+public javax.naming.Reference <b>getReference</b>()</pre></span></div></div><h1 class="heading">Return Value</h1><div id="returnValueSection" class="section" name="collapseableSection">
+    <content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">A <b>Reference</b> object.</p>
+    </content>
+  </div><h1 class="heading">Remarks</h1><div id="remarksSection" class="section" name="collapseableSection">
+    <content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">This <b>getReference</b> method is specified by the <b>getReference</b> method in the javax.naming.Referenceable interface.</p>
+      <p xmlns="">Prior to SQL Server JDBC Driver 3.0, if SQLServerDataSource.setTrustStorePassword was called on a SQLServerDataSource object, the password would be present in the object returned by SQLServerDataSource.getReference, allowing the object to be used to make additional connections. In JDBC Driver 3.0, you will need to set the password on the object returned by SQLServerDataSource.getReference before you make connections with the object.</p>
+      <p xmlns="">Also, if you set SQLServerDataSource.setTrustStorePassword before binding the data source properties, you must call SQLServerDataSource.setTrustStorePassword before getting the connection. For example,</p>
+      <div class="sampleCode" xmlns=""><span codeLanguage="other"><pre>ctx = new InitialContext(System.getProperties());
+
+SQLServerDataSource ds1 = (SQLServerDataSource) ctx.lookup(jndiName);
+
+ds1.setTrustStorePassword("XXXXX");
+Connection con = ds1.getConnection("user", "XXXXXX");
+
+ctx.rebind(jndiName, ds1);
+SQLServerDataSource ds2 = (SQLServerDataSource) ctx.lookup(jndiName);
+ds2.setTrustStorePassword("XXXXX");   // reset the truststore password
+con = ds2.getConnection("user", "XXXXXX");   // provide userid and password again</pre></span></div>
+    </content>
+  </div><span id="seeAlsoSpan"><h1 class="heading">See Also</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection"><a href="097434fd-2b74-411c-a5ed-eba04481dde5.htm">SQLServerDataSource Class</a><br /><a href="7e749bc5-d765-4864-be2b-7822d4c20c09.htm">SQLServerDataSource Members</a><br /><br /></div><!--[if gte IE 5]>
+			<tool:tip element="seeAlsoToolTip" avoidmouse="false"/><tool:tip element="languageFilterToolTip" avoidmouse="false"/><tool:tip element="roleInfoSpan" avoidmouse="false"/>
+		<![endif]-->
+      <div id="footer" class="section">
+        
+		<hr />
+		
+		<span id="fb" class="feedbackcss">
+			
+			
+		</span>
+		
+		<a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">
+			
+			© 2010 Microsoft Corporation. All rights reserved.
+		</a>
+ 	
+	
+      </div>
+    </div>
+  </body>
+</html>

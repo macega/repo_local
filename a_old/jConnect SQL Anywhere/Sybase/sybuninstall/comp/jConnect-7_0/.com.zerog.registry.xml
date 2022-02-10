@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry install_date="2013-01-09 15:38:23" version="1.1" last_modified="2013-01-09 15:38:30">
+	<products>
+		<product name="jConnect" id="bd4e790d-1ef3-11b2-bae2-fd5160e7588d" version="7.0.7.500" copyright="2012" info_url="" support_url="" location="C:\Sybase" last_modified="2013-01-09 15:38:29">
+		<![CDATA[Java implementation of the Java JDBC standard, which provides Java developers with native database access in multitier and heterogeneous environments.]]>
+			<vendor name="Sybase, Inc." id="5888a68c-1ef3-11b2-abc6-c482c3a21ba3" home_page="http://www.sybase.com" email=""/>
+			<feature short_name="fjdbc" name="JDBC Driver" last_modified="2013-01-09 15:38:27">
+			<![CDATA[]]>
+				<component ref_id="e065f27b-1ef4-11b2-8764-af11ee48245a" version="1.0.0.0" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\uninstall.exe"/>
+				<component ref_id="e065d558-1ef4-11b2-8764-af11ee48245a" version="7.0.7.500" location="C:\Sybase\"/>
+				<component ref_id="b7b98d35-1f05-11b2-94b3-8749a66527aa" version="7.0.7.500" location="C:\Sybase\"/>
+				<component ref_id="b7b99070-1f05-11b2-94b5-8749a66527aa" version="7.0.7.500" location="C:\Sybase\"/>
+			</feature>
+			<feature short_name="fribo" name="RIBO" last_modified="2013-01-09 15:38:29">
+			<![CDATA[]]>
+				<component ref_id="e065f27b-1ef4-11b2-8764-af11ee48245a" version="1.0.0.0" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\uninstall.exe"/>
+				<component ref_id="e065d558-1ef4-11b2-8764-af11ee48245a" version="7.0.7.500" location="C:\Sybase\"/>
+				<component ref_id="b7b98d35-1f05-11b2-94b3-8749a66527aa" version="7.0.7.500" location="C:\Sybase\"/>
+				<component ref_id="b7b99070-1f05-11b2-94b5-8749a66527aa" version="7.0.7.500" location="C:\Sybase\"/>
+				<component ref_id="e065e7b3-1ef4-11b2-8764-af11ee48245a" version="7.0.7.500" location="C:\Sybase\"/>
+			</feature>
+		</product>
+	</products>
+	<components>
+		<component id="b7b98d35-1f05-11b2-94b3-8749a66527aa" version="7.0.7.500" name="cdebugjdbc" location="C:\Sybase\">
+			<resource keyfile="false" name="devclasses" location="C:\Sybase\.\jConnect-7_0\devclasses" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jconn4d.jar" location="C:\Sybase\.\jConnect-7_0\devclasses\jconn4d.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jTDS3d.jar" location="C:\Sybase\.\jConnect-7_0\devclasses\jTDS3d.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EccpressoFIPS.jar" location="C:\Sybase\.\jConnect-7_0\devclasses\EccpressoFIPS.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EccpressoFIPSJca.jar" location="C:\Sybase\.\jConnect-7_0\devclasses\EccpressoFIPSJca.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+		<component id="e065e7b3-1ef4-11b2-8764-af11ee48245a" version="7.0.7.500" name="cribo" location="C:\Sybase\">
+			<resource keyfile="false" name="jutils-3_0" location="C:\Sybase\.\jutils-3_0" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="ribo" location="C:\Sybase\.\jutils-3_0\ribo" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Ribo" location="C:\Sybase\.\jutils-3_0\ribo\Ribo" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Ribo.bat" location="C:\Sybase\.\jutils-3_0\ribo\Ribo.bat" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ribo.jar" location="C:\Sybase\.\jutils-3_0\ribo\ribo.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+		<component id="e065f27b-1ef4-11b2-8764-af11ee48245a" version="1.0.0.0" name="InstallAnywhere Uninstall Component" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\uninstall.exe" vendor="Sybase, Inc.">
+			<resource keyfile="false" name="jconnect7.log" location="C:\Sybase\log\jconnect7.log" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="log" location="C:\Sybase\log" type="directory" uninstall="false" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="sybuninstall" location="C:\Sybase\sybuninstall" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="comp" location="C:\Sybase\sybuninstall\comp" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jConnect-7_0" location="C:\Sybase\sybuninstall\comp\jConnect-7_0" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="uninstaller.jar" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\uninstaller.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="true" name="uninstall.exe" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\uninstall.exe" type="executable" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uninstall.lax" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\uninstall.lax" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="resource" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\resource" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="iawin32.dll" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\resource\iawin32.dll" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="remove.exe" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\resource\remove.exe" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ZGWin32LaunchHelper.exe" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\resource\ZGWin32LaunchHelper.exe" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name=".com.zerog.registry.xml" location="C:\Sybase\sybuninstall\comp\jConnect-7_0\.com.zerog.registry.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+		<component id="b7b99070-1f05-11b2-94b5-8749a66527aa" version="7.0.7.500" name="csamplejdbc" location="C:\Sybase\">
+			<resource keyfile="false" name="sample2" location="C:\Sybase\.\jConnect-7_0\classes\sample2" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Callable.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Callable.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CommandLine.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\CommandLine.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Ping.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Ping.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Prepare.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Prepare.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SimpleSelect.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SimpleSelect.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Validate.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Validate.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Version.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Version.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Address.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Address.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AddressSubclass.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\AddressSubclass.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AsciiStream.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\AsciiStream.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AsciiToUniFileInputStream.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\AsciiToUniFileInputStream.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AutoCommit.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\AutoCommit.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="BinaryStream.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\BinaryStream.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ConnectKerberos.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ConnectKerberos.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ConnectKerberosJAAS.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ConnectKerberosJAAS.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ConnectKerberosJAAS$1.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ConnectKerberosJAAS$1.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DBMetadata.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\DBMetadata.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DebugExample.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\DebugExample.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DriverMgr.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\DriverMgr.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Escape.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Escape.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EventHandler.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\EventHandler.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EventHandler$MyEventHandler.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\EventHandler$MyEventHandler.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Execute.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Execute.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ExecuteQuery.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ExecuteQuery.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ExecuteQueryNumeric.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ExecuteQueryNumeric.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ExecuteUpdate.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ExecuteUpdate.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="GetObject.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\GetObject.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="JdbcDriver.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\JdbcDriver.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="KerberosConfiguration.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\KerberosConfiguration.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MessageHandler.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MessageHandler.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MessageHandler$ConnectionMsgHandler.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MessageHandler$ConnectionMsgHandler.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MessageHandler$StatementMsgHandler.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MessageHandler$StatementMsgHandler.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyCallable.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MyCallable.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyConnection.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MyConnection.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyDriver.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MyDriver.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyPrepare.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MyPrepare.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyResultSet.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MyResultSet.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="NameBindRPC.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\NameBindRPC.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="PrintExample.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\PrintExample.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="RSMetadata.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\RSMetadata.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Raiserror.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Raiserror.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ReadCursor.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ReadCursor.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Sample.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Sample.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SetObject.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SetObject.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SunIoConverter.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SunIoConverter.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybSample.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SybSample.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="InfoDialog.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\InfoDialog.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybSampleApplet.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SybSampleApplet.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybTimestamp.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SybTimestamp.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="UnicodeStream.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\UnicodeStream.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="UpdateCursor.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\UpdateCursor.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TextPointers.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\TextPointers.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ImageFrames.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ImageFrames.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DataRow.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\DataRow.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DataRowCache.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\DataRowCache.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Encrypt.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Encrypt.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EncryptASE.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\EncryptASE.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ExtendedResultSet.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ExtendedResultSet.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="HandleObject.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\HandleObject.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MySSLSocketFactory.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MySSLSocketFactory.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MySSLSocketFactoryASE.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\MySSLSocketFactoryASE.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SQLValue.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SQLValue.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ScrollableResultSet.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ScrollableResultSet.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SimpleRowCache.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SimpleRowCache.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybEedInfo.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SybEedInfo.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="BatchUpdates.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\BatchUpdates.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ScrollableSample.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ScrollableSample.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ClassLoaderSample.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\ClassLoaderSample.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SimpleDataSource.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SimpleDataSource.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SimpleConnectionPool.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SimpleConnectionPool.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Person.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Person.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Employee.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\Employee.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="PreLoadSample.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\PreLoadSample.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="LoaderSample.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\LoaderSample.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybPrepExtension.class" location="C:\Sybase\.\jConnect-7_0\classes\sample2\SybPrepExtension.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="index.html" location="C:\Sybase\.\jConnect-7_0\index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="netimpct.gif" location="C:\Sybase\.\jConnect-7_0\netimpct.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="docs" location="C:\Sybase\.\jConnect-7_0\docs" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="en" location="C:\Sybase\.\jConnect-7_0\docs\en" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="javadocs" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="overview-tree.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\overview-tree.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="index-all.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\index-all.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="deprecated-list.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\deprecated-list.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="allclasses-frame.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\allclasses-frame.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="index.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="packages.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\packages.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="com" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="sybase" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jdbcx" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="package-summary.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\package-summary.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="package-tree.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\package-tree.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="package-frame.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\package-frame.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Capture.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\Capture.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CharsetConverter.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\CharsetConverter.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Debug.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\Debug.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DynamicClassLoader.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\DynamicClassLoader.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EedInfo.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\EedInfo.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybCallableStatement.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybCallableStatement.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybConnection.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybConnection.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybCursorResultSet.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybCursorResultSet.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybDataSource.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybDataSource.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybDriver.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybDriver.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybEventHandler.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybEventHandler.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybMessageHandler.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybMessageHandler.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybPreparedStatement.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybPreparedStatement.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybResultSet.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybResultSet.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybSocketFactory.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybSocketFactory.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybStatement.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybStatement.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TextPointer.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\TextPointer.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="serialized-form.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\serialized-form.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="package-list" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\package-list" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="help-doc.html" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\help-doc.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="stylesheet.css" location="C:\Sybase\.\jConnect-7_0\docs\en\javadocs\stylesheet.css" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="index.html" location="C:\Sybase\.\jConnect-7_0\docs\index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="netimpct.gif" location="C:\Sybase\.\jConnect-7_0\docs\netimpct.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sample2" location="C:\Sybase\.\jConnect-7_0\sample2" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Person.java" location="C:\Sybase\.\jConnect-7_0\sample2\Person.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Employee.java" location="C:\Sybase\.\jConnect-7_0\sample2\Employee.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="LoaderSample.java" location="C:\Sybase\.\jConnect-7_0\sample2\LoaderSample.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="PreLoadSample.java" location="C:\Sybase\.\jConnect-7_0\sample2\PreLoadSample.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="IsqlApp.java" location="C:\Sybase\.\jConnect-7_0\sample2\IsqlApp.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Callable.java" location="C:\Sybase\.\jConnect-7_0\sample2\Callable.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="CommandLine.java" location="C:\Sybase\.\jConnect-7_0\sample2\CommandLine.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Ping.java" location="C:\Sybase\.\jConnect-7_0\sample2\Ping.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Prepare.java" location="C:\Sybase\.\jConnect-7_0\sample2\Prepare.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SimpleSelect.java" location="C:\Sybase\.\jConnect-7_0\sample2\SimpleSelect.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Validate.java" location="C:\Sybase\.\jConnect-7_0\sample2\Validate.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Version.java" location="C:\Sybase\.\jConnect-7_0\sample2\Version.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="gateway.html" location="C:\Sybase\.\jConnect-7_0\sample2\gateway.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AsciiStream.java" location="C:\Sybase\.\jConnect-7_0\sample2\AsciiStream.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AsciiToUniFileInputStream.java" location="C:\Sybase\.\jConnect-7_0\sample2\AsciiToUniFileInputStream.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AutoCommit.java" location="C:\Sybase\.\jConnect-7_0\sample2\AutoCommit.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="BinaryStream.java" location="C:\Sybase\.\jConnect-7_0\sample2\BinaryStream.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ConnectKerberos.java" location="C:\Sybase\.\jConnect-7_0\sample2\ConnectKerberos.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ConnectKerberosJAAS.java" location="C:\Sybase\.\jConnect-7_0\sample2\ConnectKerberosJAAS.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DBMetadata.java" location="C:\Sybase\.\jConnect-7_0\sample2\DBMetadata.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DebugExample.java" location="C:\Sybase\.\jConnect-7_0\sample2\DebugExample.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DriverMgr.java" location="C:\Sybase\.\jConnect-7_0\sample2\DriverMgr.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="exampleLogin.conf" location="C:\Sybase\.\jConnect-7_0\sample2\exampleLogin.conf" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Escape.java" location="C:\Sybase\.\jConnect-7_0\sample2\Escape.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EventHandler.java" location="C:\Sybase\.\jConnect-7_0\sample2\EventHandler.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Execute.java" location="C:\Sybase\.\jConnect-7_0\sample2\Execute.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ExecuteQuery.java" location="C:\Sybase\.\jConnect-7_0\sample2\ExecuteQuery.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ExecuteQueryNumeric.java" location="C:\Sybase\.\jConnect-7_0\sample2\ExecuteQueryNumeric.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ExecuteUpdate.java" location="C:\Sybase\.\jConnect-7_0\sample2\ExecuteUpdate.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="GetObject.java" location="C:\Sybase\.\jConnect-7_0\sample2\GetObject.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Isql.java" location="C:\Sybase\.\jConnect-7_0\sample2\Isql.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="JdbcDriver.java" location="C:\Sybase\.\jConnect-7_0\sample2\JdbcDriver.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="KerberosConfiguration.java" location="C:\Sybase\.\jConnect-7_0\sample2\KerberosConfiguration.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Makefile" location="C:\Sybase\.\jConnect-7_0\sample2\Makefile" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MessageHandler.java" location="C:\Sybase\.\jConnect-7_0\sample2\MessageHandler.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyCallable.java" location="C:\Sybase\.\jConnect-7_0\sample2\MyCallable.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyConnection.java" location="C:\Sybase\.\jConnect-7_0\sample2\MyConnection.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyDriver.java" location="C:\Sybase\.\jConnect-7_0\sample2\MyDriver.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyPrepare.java" location="C:\Sybase\.\jConnect-7_0\sample2\MyPrepare.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MyResultSet.java" location="C:\Sybase\.\jConnect-7_0\sample2\MyResultSet.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="NameBindRPC.java" location="C:\Sybase\.\jConnect-7_0\sample2\NameBindRPC.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="PrintExample.java" location="C:\Sybase\.\jConnect-7_0\sample2\PrintExample.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="RSMetadata.java" location="C:\Sybase\.\jConnect-7_0\sample2\RSMetadata.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Raiserror.java" location="C:\Sybase\.\jConnect-7_0\sample2\Raiserror.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ReadCursor.java" location="C:\Sybase\.\jConnect-7_0\sample2\ReadCursor.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Sample.java" location="C:\Sybase\.\jConnect-7_0\sample2\Sample.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SetObject.java" location="C:\Sybase\.\jConnect-7_0\sample2\SetObject.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SunIoConverter.java" location="C:\Sybase\.\jConnect-7_0\sample2\SunIoConverter.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybSample.java" location="C:\Sybase\.\jConnect-7_0\sample2\SybSample.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybSampleApplet.java" location="C:\Sybase\.\jConnect-7_0\sample2\SybSampleApplet.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybTimestamp.java" location="C:\Sybase\.\jConnect-7_0\sample2\SybTimestamp.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="UnicodeStream.java" location="C:\Sybase\.\jConnect-7_0\sample2\UnicodeStream.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="UpdateCursor.java" location="C:\Sybase\.\jConnect-7_0\sample2\UpdateCursor.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="index.html" location="C:\Sybase\.\jConnect-7_0\sample2\index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="make_nt.bat" location="C:\Sybase\.\jConnect-7_0\sample2\make_nt.bat" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pubs2_any.sql" location="C:\Sybase\.\jConnect-7_0\sample2\pubs2_any.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pubs2_sql.sql" location="C:\Sybase\.\jConnect-7_0\sample2\pubs2_sql.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TextPointers.java" location="C:\Sybase\.\jConnect-7_0\sample2\TextPointers.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mb1.jpg" location="C:\Sybase\.\jConnect-7_0\sample2\mb1.jpg" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Address.java" location="C:\Sybase\.\jConnect-7_0\sample2\Address.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="AddressSubclass.java" location="C:\Sybase\.\jConnect-7_0\sample2\AddressSubclass.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DataRow.java" location="C:\Sybase\.\jConnect-7_0\sample2\DataRow.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DataRowCache.java" location="C:\Sybase\.\jConnect-7_0\sample2\DataRowCache.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Encrypt.java" location="C:\Sybase\.\jConnect-7_0\sample2\Encrypt.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EncryptASE.java" location="C:\Sybase\.\jConnect-7_0\sample2\EncryptASE.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ExtendedResultSet.java" location="C:\Sybase\.\jConnect-7_0\sample2\ExtendedResultSet.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="HandleObject.java" location="C:\Sybase\.\jConnect-7_0\sample2\HandleObject.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MySSLSocketFactory.java" location="C:\Sybase\.\jConnect-7_0\sample2\MySSLSocketFactory.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MySSLSocketFactoryASE.java" location="C:\Sybase\.\jConnect-7_0\sample2\MySSLSocketFactoryASE.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SQLValue.java" location="C:\Sybase\.\jConnect-7_0\sample2\SQLValue.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ScrollableResultSet.java" location="C:\Sybase\.\jConnect-7_0\sample2\ScrollableResultSet.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SimpleRowCache.java" location="C:\Sybase\.\jConnect-7_0\sample2\SimpleRowCache.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybEedInfo.java" location="C:\Sybase\.\jConnect-7_0\sample2\SybEedInfo.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="BatchUpdates.java" location="C:\Sybase\.\jConnect-7_0\sample2\BatchUpdates.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ScrollableSample.java" location="C:\Sybase\.\jConnect-7_0\sample2\ScrollableSample.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ClassLoaderSample.java" location="C:\Sybase\.\jConnect-7_0\sample2\ClassLoaderSample.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SimpleDataSource.java" location="C:\Sybase\.\jConnect-7_0\sample2\SimpleDataSource.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SimpleConnectionPool.java" location="C:\Sybase\.\jConnect-7_0\sample2\SimpleConnectionPool.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SybPrepExtension.java" location="C:\Sybase\.\jConnect-7_0\sample2\SybPrepExtension.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+		<component id="e065d558-1ef4-11b2-8764-af11ee48245a" version="7.0.7.500" name="cjdbc" location="C:\Sybase\">
+			<resource keyfile="false" name="jConnect-7_0" location="C:\Sybase\.\jConnect-7_0" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="classes" location="C:\Sybase\.\jConnect-7_0\classes" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Isql.class" location="C:\Sybase\.\jConnect-7_0\classes\Isql.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="IsqlApp.class" location="C:\Sybase\.\jConnect-7_0\classes\IsqlApp.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jconn4.jar" location="C:\Sybase\.\jConnect-7_0\classes\jconn4.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jTDS3.jar" location="C:\Sybase\.\jConnect-7_0\classes\jTDS3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="gateway2" location="C:\Sybase\.\jConnect-7_0\classes\gateway2" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="FixedSession.class" location="C:\Sybase\.\jConnect-7_0\classes\gateway2\FixedSession.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TDSTunnelServlet.class" location="C:\Sybase\.\jConnect-7_0\classes\gateway2\TDSTunnelServlet.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TdsSession.class" location="C:\Sybase\.\jConnect-7_0\classes\gateway2\TdsSession.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TdsSessionManager.class" location="C:\Sybase\.\jConnect-7_0\classes\gateway2\TdsSessionManager.class" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EccpressoFIPS.jar" location="C:\Sybase\.\jConnect-7_0\classes\EccpressoFIPS.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="EccpressoFIPSJca.jar" location="C:\Sybase\.\jConnect-7_0\classes\EccpressoFIPSJca.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="gateway2" location="C:\Sybase\.\jConnect-7_0\gateway2" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="FixedSession.java" location="C:\Sybase\.\jConnect-7_0\gateway2\FixedSession.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TDSTunnelServlet.java" location="C:\Sybase\.\jConnect-7_0\gateway2\TDSTunnelServlet.java" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sp" location="C:\Sybase\.\jConnect-7_0\sp" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="sql_asa.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_asa.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_asa10.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_asa10.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_asa11.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_asa11.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_asa12.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_asa12.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_server.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_server.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_server12.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_server12.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_server12.5.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_server12.5.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_server15.0.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_server15.0.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_server15.7.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_server15.7.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sql_server15.7.0.2.sql" location="C:\Sybase\.\jConnect-7_0\sp\sql_server15.7.0.2.sql" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="tools" location="C:\Sybase\.\jConnect-7_0\tools" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="decode-tli" location="C:\Sybase\.\jConnect-7_0\tools\decode-tli" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="version.txt" location="C:\Sybase\.\jConnect-7_0\version.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="" location="com.sybase.ia.ia_db.UpdateSyInstallRegistryAction &quot;#bd4e790d-1ef3-11b2-bae2-fd5160e7588d&quot;,&quot;#&quot;,&quot;#jConnect&quot;,&quot;#7.0.7.500&quot;,&quot;#7.07 ESD#5&quot;,&quot;#C:\\Sybase\\sybuninstall\\comp\\jConnect-7_0\\uninstall&quot;,&quot;#-i silent&quot;" type="customcode" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+	</components>
+</registry>

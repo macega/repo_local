@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.netbeans.org/ns/library-declaration/3" version="3.0">
+    <name>Mail</name>
+    <type>j2se</type>
+    <display-name>Mail</display-name>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/C:/Fontes/lib_java/mail/javamail-1.4.7/mail.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/C:/Fontes/lib_java/mail/javamail-1.4.7/lib/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/C:/Fontes/lib_java/mail/javamail-1.4.7/docs/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+    <properties/>
+</library>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JavaC_Ws_NFeNFCe" default="_jar" basedir=".">
+    <property name="workspace" value="${basedir}/.."/>
+    <property name="src" value="src"/>
+    <property name="bin" value="bin"/>
+    <property name="dist" value="dist"/>
+    <property name="jar" value="nfe-ws-3.10.jar"/>
+    <property name="class" value=""/>
+    <property name="classpath" value="lib"/>
+    <property name="pkg-wsdl" value="br.inf.portalfiscal.www.nfe.wsdl"/>
+    <target name="init">
+        <mkdir dir="${dist}"/>
+    </target>
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${bin}" includeantruntime="false"/>
+    </target>
+    <target name="_jar" depends="compile">
+        <jar destfile="${dist}/${jar}">
+            <fileset dir="${bin}"/>
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="OS" value="${os.name}"/>
+                <attribute name="OS-Version" value="${os.version}"/>
+                <attribute name="Main-Class" value="${class}"/>
+                <attribute name="Class-Path" value="${classpath}"/>
+            </manifest>
+        </jar>
+    </target>
+    <target name="_wsdl-gen">
+        <taskdef name="axis2-wsdl2java" classname="org.apache.axis2.tool.ant.AntCodegenTask">
+            <classpath>
+                <fileset dir="axis2" includes="**/*.jar"/>
+            </classpath>
+        </taskdef>
+        <axis2-wsdl2java wsdlfilename="wsdl/NFeAutorizacao.wsdl" packagename="${pkg-wsdl}.autoriazacao" overwrite="true" suppressprefixes="true"/>
+        <axis2-wsdl2java wsdlfilename="wsdl/NFeRetAutorizacao.wsdl" packagename="${pkg-wsdl}.retautoriazacao" overwrite="true" suppressprefixes="true"/>
+        <axis2-wsdl2java wsdlfilename="wsdl/NfeConsultaProtocolo.wsdl" packagename="${pkg-wsdl}.consulta" overwrite="true" suppressprefixes="true"/>
+        <axis2-wsdl2java wsdlfilename="wsdl/NfeInutilizacao.wsdl" packagename="${pkg-wsdl}.inutilizacao" overwrite="true" suppressprefixes="true"/>
+        <axis2-wsdl2java wsdlfilename="wsdl/NFeRecepcao.wsdl" packagename="${pkg-wsdl}.recepcao" overwrite="true" suppressprefixes="true"/>
+        <axis2-wsdl2java wsdlfilename="wsdl/NfeRetRecepcao.wsdl" packagename="${pkg-wsdl}.retrecepcao" overwrite="true" suppressprefixes="true"/>
+        <axis2-wsdl2java wsdlfilename="wsdl/NfeStatusServico.wsdl" packagename="${pkg-wsdl}.statusservico" overwrite="true" suppressprefixes="true"/>
+        <axis2-wsdl2java wsdlfilename="wsdl/RecepcaoEvento.wsdl" packagename="${pkg-wsdl}.recepcaoevento" overwrite="true" suppressprefixes="true"/>
+    </target>
+</project>

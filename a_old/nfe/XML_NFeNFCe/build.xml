@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JavaC_XML_NFeNFCe" default="_jar" basedir=".">
+    <property name="workspace" value="${basedir}/.."/>
+    <property name="src" value="src"/>
+    <property name="bin" value="bin"/>
+    <property name="dist" value="dist"/>
+    <property name="jar" value="nfe-xml-3.10.jar"/>
+    <property name="class" value=""/>
+    <property name="classpath" value="lib"/>
+	<property name="xsd-cce" value="xsd-cce"/>
+	<property name="xsd-nfe" value="xsd-nfe"/>
+	<property name="xsd-evento-canc" value="xsd-evento-canc"/>
+    <target name="init">
+        <mkdir dir="${dist}"/>
+    </target>
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${bin}" includeantruntime="false"/>
+    </target>
+    <target name="_jar" depends="compile">
+        <jar destfile="${dist}/${jar}">
+            <fileset dir="${bin}"/>
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="OS" value="${os.name}"/>
+                <attribute name="OS-Version" value="${os.version}"/>
+                <attribute name="Main-Class" value="${class}"/>
+                <attribute name="Class-Path" value="${classpath}"/>
+            </manifest>
+        </jar>
+    </target>
+    <taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+        <classpath>
+            <fileset dir="jaxb-ri/" includes="*.jar"/>
+        </classpath>
+    </taskdef>
+    <target name="compileXsd">
+    	<mkdir dir="src/br/inf/portalfiscal/nfe/schema/${schema-nfe}"/>
+        <xjc destdir="src" schema="${xsd-file}" removeOldOutput="yes" 
+        	package="br.inf.portalfiscal.nfe.schema.${package-nfe}" binding="bindings.xml" >
+
+        	<arg value="-no-header"/>
+            <produces dir="src/br/inf/portalfiscal/nfe/schema/${schema-nfe}" includes="* impl/*"/>
+        </xjc>
+    </target>
+    <target name="_xsd-build-all">
+        <antcall target="xsdConsReciNFe"/>
+        <antcall target="xsdConsSitNfe"/>
+        <antcall target="xsdConsStatServ"/>
+        <antcall target="xsdConsStatServ"/>
+        <antcall target="xsdEnviNfe"/>
+        <antcall target="xsdInutNfe"/>
+        <antcall target="xsdNfe"/>
+        <antcall target="xsdProcNFe"/>
+        <antcall target="xsdRetConsReciNFe"/>
+        <antcall target="xsdRetConsSitNFe"/>
+        <antcall target="xsdRetConsStatServ"/>
+        <antcall target="xsdRetEnviNFe"/>
+        <antcall target="xsdRetInutNFe"/>
+        <antcall target="xsdEnvCCe"/>
+        <antcall target="xsdRetEnvCCe"/>
+        <antcall target="xsdCCe"/>
+        <antcall target="xsdE110111"/>
+        <antcall target="xsdEnvEventoCancNFe"/>
+        <antcall target="xsdEventoCancNFe"/>
+        <antcall target="xsdLeiauteEventoCancNFe"/>
+        <antcall target="xsdProcEventoCancNFe"/>
+        <antcall target="xsdRetEnvEventoCancNFe"/>
+    </target>
+    <target name="xsdConsStatServ">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="consstatserv"/>
+            <param name="package-nfe" value="consstatserv"/>
+            <param name="xsd-file" value="${xsd-nfe}/consStatServ_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdEnviNfe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="envinfe"/>
+            <param name="package-nfe" value="envinfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/enviNFe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdNfe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="nfe"/>
+            <param name="package-nfe" value="nfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/nfe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdInutNfe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="inutnfe"/>
+            <param name="package-nfe" value="inutnfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/inutNfe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdConsReciNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="consrecinfe"/>
+            <param name="package-nfe" value="consrecinfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/consReciNFe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdConsSitNfe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="conssitnfe"/>
+            <param name="package-nfe" value="conssitnfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/consSitNFe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdRetConsStatServ">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="retconsstatserv"/>
+            <param name="package-nfe" value="retconsstatserv"/>
+            <param name="xsd-file" value="${xsd-nfe}/retConsStatServ_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdRetConsSitNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="retconssitnfe"/>
+            <param name="package-nfe" value="retconssitnfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/retConsSitNFe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdRetEnviNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="retenvinfe"/>
+            <param name="package-nfe" value="retenvinfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/retEnviNFe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdRetConsReciNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="retconsrecinfe"/>
+            <param name="package-nfe" value="retconsrecinfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/retConsReciNFe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdProcNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="procnfe"/>
+            <param name="package-nfe" value="procnfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/procNFe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdRetInutNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="retinutnfe"/>
+            <param name="package-nfe" value="retinutnfe"/>
+            <param name="xsd-file" value="${xsd-nfe}/retInutNFe_v3.10.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdE110111">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="e110111"/>
+            <param name="package-nfe" value="e110111"/>
+            <param name="xsd-file" value="${xsd-evento-canc}/e110111_v1.00.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdEnvEventoCancNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="envEventoCancNFe"/>
+            <param name="package-nfe" value="envEventoCancNFe"/>
+            <param name="xsd-file" value="${xsd-evento-canc}/envEventoCancNFe_v1.00.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdEventoCancNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="eventoCancNFe"/>
+            <param name="package-nfe" value="eventoCancNFe"/>
+            <param name="xsd-file" value="${xsd-evento-canc}/eventoCancNFe_v1.00.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdLeiauteEventoCancNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="leiauteEventoCancNFe"/>
+            <param name="package-nfe" value="leiauteEventoCancNFe"/>
+            <param name="xsd-file" value="${xsd-evento-canc}/leiauteEventoCancNFe_v1.00.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdProcEventoCancNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="procEventoCancNFe"/>
+            <param name="package-nfe" value="procEventoCancNFe"/>
+            <param name="xsd-file" value="${xsd-evento-canc}/procEventoCancNFe_v1.00.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdRetEnvEventoCancNFe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="retEnvEventoCancNFe"/>
+            <param name="package-nfe" value="retEnvEventoCancNFe"/>
+            <param name="xsd-file" value="${xsd-evento-canc}/retEnvEventoCancNFe_v1.00.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdEnvCCe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="envcce"/>
+            <param name="package-nfe" value="envcce"/>
+            <param name="xsd-file" value="${xsd-cce}/envCCe_v1.00.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdCCe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="cce"/>
+            <param name="package-nfe" value="cce"/>
+            <param name="xsd-file" value="${xsd-cce}/CCe_v1.00.xsd"/>
+        </antcall>
+    </target>
+    <target name="xsdRetEnvCCe">
+        <antcall target="compileXsd">
+            <param name="schema-nfe" value="retenvcce"/>
+            <param name="package-nfe" value="retenvcce"/>
+            <param name="xsd-file" value="${xsd-cce}/retEnvCCe_v1.00.xsd"/>
+        </antcall>
+    </target>
+</project>

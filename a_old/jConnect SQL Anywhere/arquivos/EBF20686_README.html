@@ -1,0 +1,225 @@
+<html>
+<head>
+<title>Cover Letter of EBF 20686</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h1 align="right"><b> </b>Sybase Rollup EBF 20686</h1>
+<hr>
+<p align="right"><b>November 27, 2012</b></p>
+<p><b>
+Sybase, an SAP Company<br>
+One Sybase Drive<br>
+Dublin, CA 94568 <br>
+1-800-8-SYBASE (North America)<br>
+Web: <a href="http://www.sybase.com">http://www.sybase.com</a>
+</b></p>
+<p><br>
+Dear Customer:</p>
+<p>Enclosed please find:</p>
+<blockquote>
+  <b>EBF 20686 </b>
+</blockquote>
+<p>for the following platform:</p>
+<blockquote>
+  <b>Not Platform Specific </b>
+</blockquote>
+<p>This EBF is part of this release:</p>
+<blockquote>
+  <b>jConnect 7.07 ESD #5</b>
+</blockquote>
+<p>This EBF contains updates for the following product(s):</p>
+<blockquote> 
+<b>
+jConnect for JDBC
+
+</b>
+</blockquote>
+<pre><font face="Times New Roman, Times, serif" size=3>
+We recommend that you install this EBF as soon as possible.
+
+We appreciate your patience while we resolve problems in the product and your 
+willingness to install this EBF. Please contact Technical Support if you
+encounter any problems using this product and let them know that you are using
+this EBF. 
+</font></pre>
+<p>This documentation includes these sections:</p>
+<ul>
+  <li><a href="#general_info">General Information and Technical Notes</a></li><li><a href="#loading_instructions">Loading Instructions</a></li>
+  <li><a href="#new_fixes">New Fixes in this EBF</a></li>
+  <li><a href="./EBF20686_Buglist.txt">All Fixes Included in this EBF (EBF20686_Buglist.txt)</a></li>
+  <li><a href="./EBF20686_Filelist.txt">List of Files in this EBF (EBF20686_Filelist.txt)</a></li>
+</ul>
+<p>Sincerely,</p>
+<p>Sybase Engineering</p>
+<hr>
+
+<p><br></p><h2><a name="general_info">General Information and Technical Notes</a></h2>
+<p>This section contains general and technical information about this EBF.</p>
+<PRE><font face="Times New Roman, Times, serif" size=3>
+* Updating the metadata stored procedures required by jConnect Driver
+  on Adaptive Server Enterprise
+
+  Certain new features and bug fixes in jConnect driver require you to 
+  modify the metadata stored procedures in Adaptive Server. These stored
+  procedures may not be up-to-date on your host ASE server due to various
+  reasons.
+  
+  If the metadata stored procedures are outdated, you may not be able to use 
+  some of the fixes that are implemented in this ESD, so you will need to 
+  manually install the updated metadata stored procedures.
+
+  To update the metadata stored procedures in Adaptive Server, first determine 
+  the version of the meta-data scripts installed on the ASE. To do so, execute 
+  the following command:
+
+  sp_version
+  go
+
+  The version number of the jConnect meta-data script will be displayed.
+
+  Review the version number column and compare it against the version of the  
+  driver being used. 
+
+  If the metadata scripts are outdated, the version installed will be older 
+  than the driver build number or you will encounter one of the following:
+
+  - stored procedure sp_version is not found
+  - the stored procedure output does not print a row for the driver
+
+  The updated scripts are included with the driver and can be installed as 
+  follows:
+
+  - Go to the &quot;sp&quot; directory under the jConnect installation directory. Based 
+  on your host ASE server version, choose the appropriate SQL script. 
+  - Use isql or another tool of your choice to execute the selected script. 
+  This will install the current meta-data stored procedures.
+
+</font></PRE>
+
+
+
+
+<p><br></p><h2><a name="loading_instructions">Loading Instructions</a></h2>
+<p>This section contains instructions for loading the new software onto your system.</p>
+<PRE><font face="Times New Roman, Times, serif" size=3>
+NOTE: Before installing this EBF, back up your Sybase installation.
+
+For installation instructions, see the &quot;jConnect for JDBC 7.07 Installation 
+Guide&quot; documentation at http://sybooks.sybase.com/. Select &quot;jConnect for JDBC&quot; 
+from the product list, then the language, and click Go.
+
+NOTE: The path to the installer program has changed. It is now located under 
+Disk1/InstData directory. So please add this directory ahead of the setup 
+program name when invoking the installer. 
+
+</font></PRE>
+
+<p><br></p>
+<p><h2><a name="new_fixes">New Fixes in this EBF</a></h2></p>
+<pre><font face="Times New Roman, Times, serif" size=3>
+The following is a list of fixes which are specific to this EBF. The list is sorted
+by the component in which the bug was fixed.
+</font></pre>
+<p>For a complete list of fixes in this EBF, see <a href="./EBF20686_Buglist.txt">EBF20686_Buglist.txt</a>.<br></p>
+
+<table name="buglist_table" width="100%" border="1">
+  <thead>
+  <tr>
+    <th width="20%">Component</th>
+    <th width="20%">Bug ID</th>
+    <th width="60%">Description</th>
+  </tr></thead>
+  
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">714096</td>
+	  <td width="60%">jConnect: Executing a batch update PreparedStatement with DYNAMIC_PREPARE=false with numeric values may cause numeric overflow, JZ0BE exception.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">712354</td>
+	  <td width="60%">jConnect: Request support for setClientInfo() and getClientInfo()API for SybConnectionProxy class.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">712293</td>
+	  <td width="60%">jConnect: Using jConnect 7.07 to bulk insert rows in Adaptive Server versions earlier than 15.7 results in JZBK7 exception.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">711929</td>
+	  <td width="60%">jConnect: Performance regressions observed in Bulk Insert code path for jConnect 7.07 GA driver.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">711303</td>
+	  <td width="60%">jConnect: Failed to insert into table with 663 columns using PreparedStatement.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">710528</td>
+	  <td width="60%">jConnect: Using qualified table names like dbo.table_name for Bulk Inserts raises exceptions.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">709763</td>
+	  <td width="60%">jConnect: Bulk Insert writes wrong data value in non-APL tables if last column in the table is a variable length column.
+
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">707235</td>
+	  <td width="60%">jConnect: Clients redirected to another Cluster Edition instance not establishing the connection with server's default network packet size.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">705099</td>
+	  <td width="60%">jConnect: Syntax error in metadata stored procedures raises Msg 105, &quot;Unclosed quote before the character string...&quot;</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">701464</td>
+	  <td width="60%">jConnect: Executing PreparedStatement with the QUERY that contains more than 500 parameters fails with: java.sql.SQLException: Message empty.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">699038</td>
+	  <td width="60%">jConnect: Request to support timestamp data type for Bulk Insert.
+</td>
+	</tr>
+	
+	<tr>
+	  <td width="20%">JDBC Driver</td>
+	  <td width="20%" align="center">675144</td>
+	  <td width="60%">jConnect: Using large number of parameters in PreparedStatement causes SQLExceptions like &quot;Message empty.&quot; and/or &quot;The token datastream length was not correct. This is an internal protocol error.&quot;
+</td>
+	</tr>
+	
+</table>
+<br>
+<br>
+<hr>
+<p> <b>This document is proprietary and confidential Sybase Inc. property. </b> </p>
+</body>
+</html>

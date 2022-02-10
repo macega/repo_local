@@ -1,0 +1,106 @@
+﻿<html DIR="LTR" xmlns:tool="http://www.microsoft.com/tooltip" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Supporting XML Data</title>
+    
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css">
+      
+    </link>
+    
+    <script src="../local/script.js">
+      
+    </script><script src="../local/script_main.js">&amp;nbsp;</script>
+  </head>
+  <body>
+    <!--Topic built:03/26/2010 02:49:39-->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable"><tr>
+          <td align="left">
+            <span id="headerBold">Supporting XML Data</span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr></table>
+      
+      
+      
+    </div>
+    <div id="mainSection">
+      
+        
+        
+    <font color="DarkGray">
+      
+    </font>
+    <p />
+    
+    <p />
+  
+        <div id="introductionSection" class="section">
+    <p>Starting with SQL Server 2005, SQL Server provides an <b>xml</b> data type that lets you store XML documents and fragments in a SQL Server database. The <b>xml</b> data type is a built-in data type in SQL Server, and is in some ways similar to other built-in types, such as <b>int</b> and <b>varchar</b>. Like other built-in types, you can use the <b>xml</b> data type as: a variable type, a parameter type, a function-return type, or a column type when you create a table; or in Transact-SQL CAST and CONVERT functions. In the JDBC driver, the <b>xml</b> data type can be mapped as a String, byte array, stream, CLOB, BLOB, or SQLXML object. String is the default mapping. </p>
+    <p>Starting with the Microsoft SQL Server JDBC Driver version 2.0, the JDBC driver provides support for the JDBC 4.0 API, which introduces the SQLXML interface. The SQLXML interface defines methods to interact with and manipulate XML data. The <b>SQLXML</b> is a JDBC 4.0 data type and it maps to the SQL Server <b>xml</b> data type. Therefore, in order to use the SQLXML data type in your applications, you must set the classpath to include the sqljdbc4.jar file. If the application tries to use the sqljdbc3.jar when accessing the SQLXML object and its methods, an exception is thrown.</p>
+    <div style="margin: .5em 1.5em .5em 1.5em"><b>Important: </b>
+      SQL Server always validates the XML data before storing it in the database column. The applications that are running on SQL Server 2005 or later can use <b>SQLXML</b> data type, because the JDBC driver maps it to the <b>xml</b> data type automatically. However, using <b>SQLXML</b> data type on SQL Server 2000 will throw an exception. The <b>SQLXML</b> support is available in sqljdbc4.jar, which only works on Java Runtime Environment (JRE) 6.0 or later.<p />
+    </div>
+    <p>The topics in this section describe the SQLXML interface and how to program against the <b>SQLXML</b> data type by using the JDBC API methods. </p>
+  </div><h1 class="heading">In This Section</h1><div id="sectionSection0" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <table width="100%" cellspacing="0" cellpadding="0" border="1" style="background-color: #CCCCCC;" xmlns=""><tr>
+            <th>
+              Topic
+            </th>
+            <th>
+              Description
+            </th>
+          </tr><tr>
+          <td>
+            <p>
+              <a href="7c67be98-efb5-446c-a0e3-ee67c43cb170.htm">SQLXML Interface</a>
+            </p>
+          </td>
+          <td>
+            <p>Describes the SQLXML interface and its methods.</p>
+          </td>
+        </tr><tr>
+          <td>
+            <p>
+              <a href="4d2cc57c-7293-4d92-b8b1-525e2b35f591.htm">Programming with SQLXML</a>
+            </p>
+          </td>
+          <td>
+            <p>Describes how to use the Microsoft SQL Server JDBC Driver API methods to store and retrieve an XML data in and from a relational database with the <b>SQLXML</b> Java data type. Also contains information about the types of SQLXML objects and provides a list of important guidelines and limitations when using SQLXML objects.</p>
+          </td>
+        </tr></table>
+    </content></div><span id="seeAlsoSpan"><h1 class="heading">See Also</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection"><a href="7802328d-4d23-4775-9573-4169b127d258.htm">Understanding the JDBC Driver Data Types</a><br /><br /></div><!--[if gte IE 5]>
+			<tool:tip element="seeAlsoToolTip" avoidmouse="false"/><tool:tip element="languageFilterToolTip" avoidmouse="false"/><tool:tip element="roleInfoSpan" avoidmouse="false"/>
+		<![endif]-->
+      <div id="footer" class="section">
+        
+		<hr />
+		
+		<span id="fb" class="feedbackcss">
+			
+			
+		</span>
+		
+		<a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">
+			
+			© 2010 Microsoft Corporation. All rights reserved.
+		</a>
+ 	
+	
+      </div>
+    </div>
+  </body>
+</html>

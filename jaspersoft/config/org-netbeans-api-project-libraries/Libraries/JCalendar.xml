@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.netbeans.org/ns/library-declaration/3" version="3.0">
+    <name>JCalendar</name>
+    <type>j2se</type>
+    <display-name>JCalendar</display-name>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/C:/Fontes/lib_java/JCalendar/lib/jcalendar-1.4.jar!/</resource>
+        <resource>jar:file:/C:/Fontes/lib_java/JCalendar/lib/jgoodies-common-1.2.0.jar!/</resource>
+        <resource>jar:file:/C:/Fontes/lib_java/JCalendar/lib/jgoodies-looks-2.4.1.jar!/</resource>
+        <resource>jar:file:/C:/Fontes/lib_java/JCalendar/lib/junit-4.6.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/C:/Fontes/lib_java/JCalendar/src/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/C:/Fontes/lib_java/JCalendar/doc/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+    <properties/>
+</library>

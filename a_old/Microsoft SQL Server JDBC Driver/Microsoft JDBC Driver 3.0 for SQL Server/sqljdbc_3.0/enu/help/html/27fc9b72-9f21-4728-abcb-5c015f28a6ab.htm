@@ -1,0 +1,189 @@
+﻿<html DIR="LTR" xmlns:tool="http://www.microsoft.com/tooltip" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Wrappers and Interfaces</title>
+    
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css">
+      
+    </link>
+    
+    <script src="../local/script.js">
+      
+    </script><script src="../local/script_main.js">&amp;nbsp;</script>
+  </head>
+  <body>
+    <!--Topic built:03/26/2010 02:49:39-->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable"><tr>
+          <td align="left">
+            <span id="headerBold">Wrappers and Interfaces</span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr></table>
+      
+      
+      
+    </div>
+    <div id="mainSection">
+      
+        
+        
+    <font color="DarkGray">
+      
+    </font>
+    <p />
+    
+    <p />
+  
+        <div id="introductionSection" class="section">
+    <p>The Microsoft SQL Server JDBC Driver supports interfaces that allow you create a proxy of a class, and wrappers that let you access extensions to the JDBC API that are specific to the SQL Server JDBC Driver through a proxy interface.</p>
+  </div><h1 class="heading">Wrappers</h1><div id="sectionSection0" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">The SQL Server JDBC Driver supports the java.sql.Wrapper interface. This interface provides a mechanism to access extensions to the JDBC API that are specific to the SQL Server JDBC Driver through a proxy interface.</p>
+      <p xmlns="">The java.sql.Wrapper interface defines two methods: <b>isWrapperFor</b> and <b>unwrap</b>. The <b>isWrapperFor</b> method checks whether the specified input object implements this interface. The <b>unwrap</b> method returns an object that implements this interface to allow access to the SQL Server JDBC Driver specific methods.</p>
+      <p xmlns="">
+        <b>isWrapperFor</b> and <b>unwrap</b> methods are exposed as follows:</p>
+      <ul xmlns=""><li>
+          
+            <a href="71156863-3588-453e-b5a5-0573b2c1bebf.htm">isWrapperFor Method (SQLServerCallableStatement)</a>
+          <br />
+        </li><li>
+          
+            <a href="cbbf2728-b8c8-4c35-875a-6e967c8285dc.htm">unwrap Method (SQLServerCallableStatement)</a>
+          <br />
+        </li><li>
+          
+            <a href="09ed10eb-6e46-437b-a7c0-3c55574aad38.htm">isWrapperFor Method (SQLServerConnectionPoolDataSource)</a>
+          <br />
+        </li><li>
+          
+            <a href="f5c9b734-2096-4ae4-a284-6b4d1b4a00d4.htm">unwrap Method (SQLServerConnectionPoolDataSource)</a>
+          <br />
+        </li><li>
+          
+            <a href="f77af027-c021-4a17-b264-1ee592bfdd84.htm">isWrapperFor Method (SQLServerDataSource)</a>
+          <br />
+        </li><li>
+          
+            <a href="eb8abe29-f3ec-4752-a590-1d5dc3e48f08.htm">unwrap Method (SQLServerDataSource)</a>
+          <br />
+        </li><li>
+          
+            <a href="b0e591b1-73e2-4f90-967f-5555eadfc3f1.htm">isWrapperFor Method (SQLServerPreparedStatement)</a>
+          <br />
+        </li><li>
+          
+            <a href="8e3ec950-3ac1-4c28-9e97-ddce3bd46578.htm">unwrap Method (SQLServerPreparedStatement)</a>
+          <br />
+        </li><li>
+          
+            <a href="53f3291f-d43a-476b-a656-d86168dacf6c.htm">isWrapperFor Method (SQLServerStatement)</a>
+          <br />
+        </li><li>
+          
+            <a href="ce680176-ef04-4e44-bb6c-ec50bd06e7e6.htm">unwrap Method (SQLServerStatement)</a>
+          <br />
+        </li><li>
+          
+            <a href="d612461d-4c3f-46db-b968-ff4c80b2aa7c.htm">isWrapperFor Method (SQLServerXADataSource)</a>
+          <br />
+        </li><li>
+          
+            <a href="d97c99b3-2224-4abb-8b32-40aff49fe759.htm">unwrap Method (SQLServerXADataSource)</a>
+          <br />
+        </li></ul>
+    </content></div><h1 class="heading">Interfaces</h1><div id="sectionSection1" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">Beginning in SQL Server JDBC Driver 3.0, interfaces are available for an application server to access a driver specific method from the associated class. The application server can wrap the class by creating a proxy, exposing the SQL Server JDBC driver-specific functionality from an interface. The SQL Server JDBC driver supports interfaces that have the SQL Server JDBC driver specific methods and constants so an application server can create a proxy of the class.</p>
+      <p xmlns="">The interfaces derive from standard Java interfaces so you can use the same object once it is unwrapped to access driver specific functionality or generic SQL Server JDBC driver functionality.</p>
+      <p xmlns="">The following interfaces are added:</p>
+      <ul xmlns=""><li>
+          
+            <a href="030a1631-cfcd-41e0-beb5-47f93c01e8e0.htm">ISQLServerCallableStatement</a>
+          <br />
+        </li><li>
+          
+            <a href="031c01e2-2c65-4fe4-9700-fdbcc7a39f30.htm">ISQLServerConnection</a>
+          <br />
+        </li><li>
+          
+            <a href="ba1d3242-19ca-4321-83fe-867a4f69f1d4.htm">ISQLServerDataSource</a>
+          <br />
+        </li><li>
+          
+            <a href="cf87892e-5c34-4ac6-8258-c2a81e117b26.htm">ISQLServerPreparedStatement</a>
+          <br />
+        </li><li>
+          
+            <a href="002496f7-8ec0-4267-b4e6-ba095e2ef306.htm">ISQLServerResultSet</a>
+          <br />
+        </li><li>
+          
+            <a href="7f83b514-6e76-4f37-baf3-a10db2010e7c.htm">ISQLServerStatement</a>
+          <br />
+        </li></ul>
+    </content></div><h1 class="heading">Example</h1><div id="sectionSection2" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <h1 class="heading" xmlns="">Description</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">This sample demonstrates how to access to a SQL Server JDBC Driver-specific function from a <b>DataSource</b> object. This <b>DataSource</b> class may have been wrapped by an application server. To access the JDBC driver-specific function or constant, you can unwrap the datasource to an <b>ISQLServerDataSource</b> interface and use the functions declared in this interface.</p>
+        </content></div>
+      <h1 class="heading" xmlns="">Code</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <div class="sampleCode" xmlns=""><span codeLanguage="other"><pre>import javax.sql.*;
+import java.sql.*;
+import com.microsoft.sqlserver.jdbc.*;
+
+public class UnWrapTest {
+   public static void main(String[] args) {
+      // This is a test.  This DataSource object could be something from an appserver 
+      // which has wrapped the real SQLServerDataSource with its own wrapper
+      SQLServerDataSource ds = new SQLServerDataSource();
+      checkSendStringParametersAsUnicode(ds);
+   }
+
+   // Unwrap to the ISQLServerDataSource interface to access the getSendStringParametersAsUnicode function
+   static void checkSendStringParametersAsUnicode(DataSource ds) {
+      try {
+         final ISQLServerDataSource sqlServerDataSource = ds.unwrap(ISQLServerDataSource.class);
+         boolean sendStringParametersAsUnicode = sqlServerDataSource.getSendStringParametersAsUnicode();
+
+         System.out.println("Send string as parameter value is:-" + sendStringParametersAsUnicode);
+
+      } catch (SQLException sqlE) {
+         System.out.println("Exception:-" + sqlE);
+      }
+   }
+}</pre></span></div>
+        </content></div>
+    </sections></div><span id="seeAlsoSpan"><h1 class="heading">See Also</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection"><a href="7802328d-4d23-4775-9573-4169b127d258.htm">Understanding the JDBC Driver Data Types</a><br /><br /></div><!--[if gte IE 5]>
+			<tool:tip element="seeAlsoToolTip" avoidmouse="false"/><tool:tip element="languageFilterToolTip" avoidmouse="false"/><tool:tip element="roleInfoSpan" avoidmouse="false"/>
+		<![endif]-->
+      <div id="footer" class="section">
+        
+		<hr />
+		
+		<span id="fb" class="feedbackcss">
+			
+			
+		</span>
+		
+		<a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">
+			
+			© 2010 Microsoft Corporation. All rights reserved.
+		</a>
+ 	
+	
+      </div>
+    </div>
+  </body>
+</html>

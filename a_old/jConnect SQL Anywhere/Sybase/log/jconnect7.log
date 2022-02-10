@@ -1,0 +1,996 @@
+__________________________________________________________________________
+
+Wed Jan 09 15:38:32 GMT 2013
+
+Free Memory: 28624 kB
+Total Memory: 50412 kB
+
+java.class.path:
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\IAClasses.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\Execute.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\Windows\InstallerData\Execute.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\Resource1.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\Windows\InstallerData\Resource1.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\Windows\InstallerData
+
+ZGUtil.CLASS_PATH:
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\IAClasses.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\Execute.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData
+
+sun.boot.class.path:
+    C:\Arquivos de programas\Java\jre7\lib\resources.jar
+    C:\Arquivos de programas\Java\jre7\lib\rt.jar
+    C:\Arquivos de programas\Java\jre7\lib\sunrsasign.jar
+    C:\Arquivos de programas\Java\jre7\lib\jsse.jar
+    C:\Arquivos de programas\Java\jre7\lib\jce.jar
+    C:\Arquivos de programas\Java\jre7\lib\charsets.jar
+    C:\Arquivos de programas\Java\jre7\lib\jfr.jar
+    C:\Arquivos de programas\Java\jre7\classes
+
+java.ext.dirs:
+    C:\Arquivos de programas\Java\jre7\lib\ext
+    C:\WINDOWS\Sun\Java\lib\ext
+
+java.version                  == 1.7.0_09 (Java 1)
+java.vm.name                  == Java HotSpot(TM) Client VM
+java.vm.vendor                == Oracle Corporation
+java.vm.version               == 23.5-b02
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Oracle Corporation
+java.vm.specification.version == 1.7
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Oracle Corporation
+java.specification.version    == 1.7
+java.vendor                   == Oracle Corporation
+java.vendor.url               == http://java.oracle.com/
+java.class.version            == 51.0
+java.compiler                 == null
+java.home                     == C:\Arquivos de programas\Java\jre7
+java.io.tmpdir                == C:\DOCUME~1\ADMINI~1\CONFIG~1\Temp\
+os.name                       == Windows XP
+os.arch                       == x86
+os.version                    == 5.1
+path.separator                == ;
+file.separator                == \
+file.encoding                 == Cp1252
+user.name                     == Administrador
+user.home                     == C:\Documents and Settings\Administrador
+user.dir                      == C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\Windows
+user.language                 == pt
+user.region                   == null
+__________________________________________________________________________
+
+Installed Feature(s) fjdbc, fribo of jConnect
+
+Install Begin: JANUARY 9, 2013 3:37:06 PM GMT
+Install End: JANUARY 9, 2013 3:38:30 PM GMT
+
+Installed by InstallAnywhere 12.5 Enterprise Build 4208
+
+
+User Interactions
+-----------------
+
+
+#Validate Response File
+#----------------------
+RUN_SILENT=true
+
+#Choose Install Folder
+#---------------------
+USER_INSTALL_DIR=C:\\Sybase
+
+#Choose Install Set
+#------------------
+CHOSEN_FEATURE_LIST=fjdbc,fribo
+CHOSEN_INSTALL_FEATURE_LIST=fjdbc,fribo
+CHOSEN_INSTALL_SET=Custom
+
+#Install
+#-------
+-fileOverwrite_C\:\\Sybase\\sybuninstall\\comp\\jConnect-7_0\\uninstall.lax=Yes
+-fileOverwrite_C\:\\Sybase\\sybuninstall\\comp\\jConnect-7_0\\resource\\iawin32.dll=Yes
+-fileOverwrite_C\:\\Sybase\\sybuninstall\\comp\\jConnect-7_0\\resource\\remove.exe=Yes
+
+Summary
+-------
+
+Installation: Successful null
+
+249 Successes
+1 Warnings
+0 NonFatalErrors
+0 FatalErrors
+
+Action Notes:
+
+None
+
+Install Log Detail:
+
+Check Disk Space:         C:\Sybase
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Required Disk Space: 15.094.733; Free Disk Space: 277.982.998.528
+
+
+Custom Action:            com.sybase.ia.common.SybaseInitialization
+                          Status: SUCCESSFUL
+
+Custom Action:            com.sybase.ia.common.ValidateResponseFile
+                          Status: SUCCESSFUL
+
+
+
+                          
+jConnect/7.07 ESD#5/P/Generic/Generic/sybinstjconnectbase/Sun Oct 21 23:17:56 PDT 2012
+SybInstall Framework/1.4/InstallAnywhere 2011 (Build: 4208)/LAX 12.5/javac 1.6.0_16/i386/Linux 2.4.21-27.0.2.ELsmp/sybinstmain/Thu Oct 18 12 02:31:57 PDT 2012
+
+Confidential property of Sybase, Inc.
+Copyright 1987 - 2012
+Sybase, Inc.  All rights reserved.
+Unpublished rights reserved under U.S. copyright laws.
+
+This software contains confidential and trade secret information of Sybase,
+Inc.   Use,  duplication or disclosure of the software and documentation by
+the  U.S.  Government  is  subject  to  restrictions set forth in a license
+agreement  between  the  Government  and  Sybase, Inc.  or  other  written
+agreement  specifying  the  Government's rights to use the software and any
+applicable FAR provisions, for example, FAR 52.227-19.
+Sybase, Inc. One Sybase Drive, Dublin, CA 94568, USA
+
+
+Custom Action:            com.sybase.ia.common.ShowVersionAction
+                          Status: SUCCESSFUL
+
+
+Custom Action:            com.sybase.ia.licensepanel.SybaseLicenseAction
+                          Status: SUCCESSFUL
+
+
+                          Status: WARNING
+                          Additional Notes: WARNING - Unable to read product/component registry. Possible cause: Home directory does not exist or readable.
+
+Custom Action:            com.sybase.ia.common.SybaseDestination
+                          Status: SUCCESSFUL
+
+
+Custom Action:            com.sybase.ia.common.SybaseDestinationCheckAction
+                          Status: SUCCESSFUL
+
+Custom Action:            com.sybase.ia.ia_db.CheckInstalledComponentVersionAction
+                          Status: SUCCESSFUL
+
+Check Disk Space:         C:\Sybase
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Required Disk Space: 15,094,733; Free Disk Space: 277,982,998,528
+
+Check Disk Space:         C:\Sybase
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Required Disk Space: 15,094,733; Free Disk Space: 277,982,998,528
+
+Install Directory:        C:\Sybase\
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Directory already existed
+
+Install Directory:        C:\Sybase\log\
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\Sybase\sybuninstall\
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\Sybase\sybuninstall\comp\
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\Sybase\sybuninstall\comp\jConnect-7_0\
+                          Status: SUCCESSFUL
+
+Install Uninstaller:      jConnect(Install All Uninstaller Components)
+                          Status: SUCCESSFUL
+
+Create LaunchAnywhere:    resource jar is empty
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\sybuninstall\comp\jConnect-7_0\uninstall.exe
+                          Status: SUCCESSFUL
+
+
+Install File:             C:\Sybase\sybuninstall\comp\jConnect-7_0\uninstall.lax
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\Sybase\sybuninstall\comp\jConnect-7_0\resource\
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\sybuninstall\comp\jConnect-7_0\resource\iawin32.dll
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\sybuninstall\comp\jConnect-7_0\resource\remove.exe
+                          Status: SUCCESSFUL
+
+Install Uninstaller:      jConnect(Install All Uninstaller Components)
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\Isql.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\IsqlApp.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\jconn4.jar
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\jTDS3.jar
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\gateway2\FixedSession.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\gateway2\TDSTunnelServlet.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\gateway2\TdsSession.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\gateway2\TdsSessionManager.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\EccpressoFIPS.jar
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\EccpressoFIPSJca.jar
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\gateway2\FixedSession.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\gateway2\TDSTunnelServlet.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_asa.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_asa10.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_asa11.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_asa12.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_server.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_server12.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_server12.5.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_server15.0.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_server15.7.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sp\sql_server15.7.0.2.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\tools\decode-tli
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\version.txt
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\devclasses\jconn4d.jar
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\devclasses\jTDS3d.jar
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\devclasses\EccpressoFIPS.jar
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\devclasses\EccpressoFIPSJca.jar
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Callable.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\CommandLine.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Ping.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Prepare.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SimpleSelect.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Validate.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Version.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Address.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\AddressSubclass.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\AsciiStream.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\AsciiToUniFileInputStream.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\AutoCommit.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\BinaryStream.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ConnectKerberos.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ConnectKerberosJAAS.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ConnectKerberosJAAS$1.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\DBMetadata.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\DebugExample.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\DriverMgr.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Escape.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\EventHandler.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\EventHandler$MyEventHandler.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Execute.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ExecuteQuery.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ExecuteQueryNumeric.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ExecuteUpdate.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\GetObject.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\JdbcDriver.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\KerberosConfiguration.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MessageHandler.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MessageHandler$ConnectionMsgHandler.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MessageHandler$StatementMsgHandler.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MyCallable.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MyConnection.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MyDriver.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MyPrepare.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MyResultSet.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\NameBindRPC.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\PrintExample.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\RSMetadata.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Raiserror.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ReadCursor.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Sample.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SetObject.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SunIoConverter.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SybSample.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\InfoDialog.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SybSampleApplet.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SybTimestamp.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\UnicodeStream.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\UpdateCursor.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\TextPointers.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ImageFrames.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\DataRow.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\DataRowCache.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Encrypt.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\EncryptASE.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ExtendedResultSet.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\HandleObject.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MySSLSocketFactory.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\MySSLSocketFactoryASE.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SQLValue.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ScrollableResultSet.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SimpleRowCache.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SybEedInfo.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\BatchUpdates.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ScrollableSample.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\ClassLoaderSample.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SimpleDataSource.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SimpleConnectionPool.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Person.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\Employee.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\PreLoadSample.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\LoaderSample.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\classes\sample2\SybPrepExtension.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\index.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\netimpct.gif
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\overview-tree.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\index-all.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\deprecated-list.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\allclasses-frame.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\index.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\packages.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\package-summary.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\package-tree.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\package-frame.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\Capture.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\CharsetConverter.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\Debug.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\DynamicClassLoader.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\EedInfo.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybCallableStatement.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybConnection.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybCursorResultSet.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybDataSource.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybDriver.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybEventHandler.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybMessageHandler.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybPreparedStatement.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybResultSet.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybSocketFactory.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\SybStatement.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\com\sybase\jdbcx\TextPointer.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\serialized-form.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\package-list
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\help-doc.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\en\javadocs\stylesheet.css
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\index.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\docs\netimpct.gif
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Person.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Employee.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\LoaderSample.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\PreLoadSample.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\IsqlApp.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Callable.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\CommandLine.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Ping.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Prepare.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SimpleSelect.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Validate.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Version.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\gateway.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\AsciiStream.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\AsciiToUniFileInputStream.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\AutoCommit.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\BinaryStream.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ConnectKerberos.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ConnectKerberosJAAS.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\DBMetadata.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\DebugExample.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\DriverMgr.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\exampleLogin.conf
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Escape.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\EventHandler.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Execute.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ExecuteQuery.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ExecuteQueryNumeric.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ExecuteUpdate.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\GetObject.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Isql.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\JdbcDriver.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\KerberosConfiguration.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Makefile
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\MessageHandler.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\MyCallable.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\MyConnection.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\MyDriver.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\MyPrepare.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\MyResultSet.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\NameBindRPC.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\PrintExample.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\RSMetadata.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Raiserror.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ReadCursor.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Sample.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SetObject.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SunIoConverter.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SybSample.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SybSampleApplet.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SybTimestamp.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\UnicodeStream.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\UpdateCursor.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\index.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\make_nt.bat
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\pubs2_any.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\pubs2_sql.sql
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\TextPointers.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\mb1.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Address.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\AddressSubclass.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\DataRow.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\DataRowCache.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\Encrypt.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\EncryptASE.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ExtendedResultSet.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\HandleObject.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\MySSLSocketFactory.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\MySSLSocketFactoryASE.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SQLValue.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ScrollableResultSet.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SimpleRowCache.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SybEedInfo.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\BatchUpdates.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ScrollableSample.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\ClassLoaderSample.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SimpleDataSource.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SimpleConnectionPool.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jConnect-7_0\sample2\SybPrepExtension.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jutils-3_0\ribo\Ribo
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jutils-3_0\ribo\Ribo.bat
+                          Status: SUCCESSFUL
+
+Install File:             C:\Sybase\.\jutils-3_0\ribo\ribo.jar
+                          Status: SUCCESSFUL
+
+Custom Action:            com.sybase.ia.ia_db.UpdateSyInstallRegistryAction
+                          Status: SUCCESSFUL
+
+
+====================STDERR ENTRIES==================
+
+__________________________________________________________________________
+
+InstallAnywhere 2011
+Version: 12.5
+__________________________________________________________________________
+
+Wed Jan 09 15:37:02 GMT 2013
+
+Free Memory: 11874 kB
+Total Memory: 15872 kB
+
+No Arguments
+
+java.class.path:
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\IAClasses.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\Execute.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\Windows\InstallerData\Execute.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\Resource1.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\Windows\InstallerData\Resource1.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\Windows\InstallerData
+
+ZGUtil.CLASS_PATH:
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\IAClasses.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData\Execute.zip
+    C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\InstallerData
+
+sun.boot.class.path:
+    C:\Arquivos de programas\Java\jre7\lib\resources.jar
+    C:\Arquivos de programas\Java\jre7\lib\rt.jar
+    C:\Arquivos de programas\Java\jre7\lib\sunrsasign.jar
+    C:\Arquivos de programas\Java\jre7\lib\jsse.jar
+    C:\Arquivos de programas\Java\jre7\lib\jce.jar
+    C:\Arquivos de programas\Java\jre7\lib\charsets.jar
+    C:\Arquivos de programas\Java\jre7\lib\jfr.jar
+    C:\Arquivos de programas\Java\jre7\classes
+
+java.ext.dirs:
+    C:\Arquivos de programas\Java\jre7\lib\ext
+    C:\WINDOWS\Sun\Java\lib\ext
+
+java.version                  == 1.7.0_09 (Java 1)
+java.vm.name                  == Java HotSpot(TM) Client VM
+java.vm.vendor                == Oracle Corporation
+java.vm.version               == 23.5-b02
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Oracle Corporation
+java.vm.specification.version == 1.7
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Oracle Corporation
+java.specification.version    == 1.7
+java.vendor                   == Oracle Corporation
+java.vendor.url               == http://java.oracle.com/
+java.class.version            == 51.0
+java.compiler                 == null
+java.home                     == C:\Arquivos de programas\Java\jre7
+java.io.tmpdir                == C:\DOCUME~1\ADMINI~1\CONFIG~1\Temp\
+os.name                       == Windows XP
+os.arch                       == x86
+os.version                    == 5.1
+path.separator                == ;
+file.separator                == \
+file.encoding                 == Cp1252
+user.name                     == Administrador
+user.home                     == C:\Documents and Settings\Administrador
+user.dir                      == C:\Documents and Settings\Administrador\Configurações locais\temp\I1357745805\Windows
+user.language                 == pt
+user.region                   == null
+__________________________________________________________________________
+
+
+
+
+
+
+
+Loading externalized properties
+DEBUG>>> 01-09-13 15:37:08 : SybaseInitialization: $INSTALLER_LOCALE$ is set to en
+DEBUG>>> 01-09-13 15:37:08 : SybaseInitialization: set jvm default locale to en
+DEBUG>>> 01-09-13 15:37:08 : ShowVersionAction: $INSTALLER_VERSION_STRING$=jConnect/7.07 ESD#5/P/Generic/Generic/sybinstjconnectbase/Sun Oct 21 23:17:56 PDT 2012
+DEBUG>>> 01-09-13 15:37:08 : ShowVersionAction: $FRAMEWORK_VERSION_STRING$=SybInstall Framework/1.4/InstallAnywhere 2011 (Build: 4208)/LAX 12.5/javac 1.6.0_16/i386/Linux 2.4.21-27.0.2.ELsmp/sybinstmain/Thu Oct 18 12 02:31:57 PDT 2012
+DEBUG>>> 01-09-13 15:37:08 : ShowVersionAction: $SYLAPI_NATIVE_LIB_DIR$ not defined.  Can't get SyLAPI version.
+DEBUG>>> 01-09-13 15:37:08 : ShowVersionAction: $INSTALLER_COPYRIGHT_YEAR$=
+DEBUG>>> 01-09-13 15:37:08 : ShowVersionAction: $SHOW_VERSION$=false
+MSG>>> 01-09-13 15:37:08 : 
+jConnect/7.07 ESD#5/P/Generic/Generic/sybinstjconnectbase/Sun Oct 21 23:17:56 PDT 2012
+SybInstall Framework/1.4/InstallAnywhere 2011 (Build: 4208)/LAX 12.5/javac 1.6.0_16/i386/Linux 2.4.21-27.0.2.ELsmp/sybinstmain/Thu Oct 18 12 02:31:57 PDT 2012
+
+Confidential property of Sybase, Inc.
+Copyright 1987 - 2012
+Sybase, Inc.  All rights reserved.
+Unpublished rights reserved under U.S. copyright laws.
+
+This software contains confidential and trade secret information of Sybase,
+Inc.   Use,  duplication or disclosure of the software and documentation by
+the  U.S.  Government  is  subject  to  restrictions set forth in a license
+agreement  between  the  Government  and  Sybase, Inc.  or  other  written
+agreement  specifying  the  Government's rights to use the software and any
+applicable FAR provisions, for example, FAR 52.227-19.
+Sybase, Inc. One Sybase Drive, Dublin, CA 94568, USA
+
+WARN>>> 01-09-13 15:38:00 : Unable to read product/component registry. Possible cause: Home directory does not exist or readable.
+DEBUG>>> 01-09-13 15:38:00 : SybaseDestination.install() : default destination directory not changed
+DEBUG>>> 01-09-13 15:38:09 : CheckInstalledComponentVersion.getComponentVersionText(): This is jConnect 7.0.7.500
+System's temporary directory = C:\Documents and Settings\Administrador\Configurações locais\Temp
+XMLScriptWriter: No Installation Objects were skipped
+DEBUG>>> 01-09-13 15:38:29 : UpdateSyInstallRegistryAction:	Adding bd4e790d-1ef3-11b2-bae2-fd5160e7588d jConnect 7.0.7.500 to registry...
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+SHUTDOWN REQUESTED
+
+REGISTRY ALREADY STORED!
+
+Exiting with exit code: 1
+====================STDOUT ENTRIES==================
+
+(X) commiting registry
+(X) shutting down service manager
+(X) cleaning up temporary directories

@@ -1,0 +1,42 @@
+#!/usr/global/opt/perl/bin/perl
+
+# decode the tli entries in a sybase interfaces file
+# usage: decode-tli [ interfaces-file ... ]
+
+# This script is NOT SUPPORTED.
+# Sybase is providing this script free of charge on an "as is" basis
+# without warranty of any kind.
+#
+#	SYBASE DISCLAIMS ALL WARRANTIES OR CONDITIONS, EXPRESS OR
+#	IMPLIED, INCLUDING, BUT NOT LIMITED, TO THE IMPLIED
+#	WARRANTIES OR CONDITIONS OF MERCHANTABLE QUALITY AND
+#	FITNESS FOR A PARTICULAR PURPOSE AND THOSE ARISING BY
+#	STATUTE OR OTHERWISE IN LAW OR FROM A COURSE OF DEALING OR
+#	USAGE OF TRADE. 
+
+local($name, $host, $port);
+
+while (<>)
+{
+	# save server name
+	chop, $name = $_, next if /^\w+/;
+
+	if (/query|master/ && /\\x/)
+	{
+		s/^\s+//;
+		# grab a query entry, e.g.
+		# query tli tcp /dev/tcp \x0002115cc08a97270000000000000000
+		$type = $1 if /(query|master)/;
+		@_ = split; $_=$_[4];
+		# grab tli part
+		# \x0002 115c  c0  8a  97  27 0000000000000000
+		/\\x....(....)(..)(..)(..)(..)0{16}$/;
+		$host = sprintf("%d.%d.%d.%d", 
+			hex($2), hex($3), hex($4), hex($5)); 
+		$port = hex($1);
+		# print name:type<tab>host:port,
+		# e.g. JDBC:query	192.138.151.39:4444
+		print "$name:$type\t$host:$port\n";
+		next;
+	}
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<!DOCTYPE connection PUBLIC '-//NetBeans//DTD Database Connection 1.1//EN' 'http://www.netbeans.org/dtds/connection-1_1.dtd'>
+<connection>
+  <driver-class value='com.microsoft.sqlserver.jdbc.SQLServerDriver'/>
+  <driver-name value='Microsoft SQL Server 2005'/>
+  <database-url value='jdbc:sqlserver://MEDINA:1433;databaseName=DADOS'/>
+  <schema value='dbo'/>
+  <user value='jsys'/>
+</connection>

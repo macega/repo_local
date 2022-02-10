@@ -1,0 +1,139 @@
+﻿<html DIR="LTR" xmlns:tool="http://www.microsoft.com/tooltip" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Using Adaptive Buffering</title>
+    
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css">
+      
+    </link>
+    
+    <script src="../local/script.js">
+      
+    </script><script src="../local/script_main.js">&amp;nbsp;</script>
+  </head>
+  <body>
+    <!--Topic built:03/26/2010 02:49:39-->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable"><tr>
+          <td align="left">
+            <span id="headerBold">Using Adaptive Buffering</span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr></table>
+      
+      
+      
+    </div>
+    <div id="mainSection">
+      
+        
+        
+    <font color="DarkGray">
+      
+    </font>
+    <p />
+    
+    <p />
+  
+        <div id="introductionSection" class="section">
+    <p>Adaptive buffering is designed to retrieve any kind of large-value data without the overhead of server cursors. Applications can use the adaptive buffering feature with all versions of SQL Server that are supported by the driver.</p>
+    <p>Normally, when the Microsoft SQL Server JDBC Driver executes a query, the driver retrieves all of the results from the server into application memory. Although this approach minimizes resource consumption on the SQL Server, it can throw an <b>OutOfMemoryError</b> in the JDBC application for the queries that produce very large results. </p>
+    <p>In order to allow applications to handle very large results, the Microsoft SQL Server JDBC Driver provides adaptive buffering. With adaptive buffering, the driver retrieves statement execution results from the SQL Server as the application needs them, rather than all at once. The driver also discards the results as soon as the application can no longer access them. The following are some examples where the adaptive buffering can be useful: </p>
+    <ul><li>
+        
+          <b>The query produces a very large result set:</b> The application can execute a SELECT statement that produces more rows than the application can store in memory. In previous releases, the application had to use a server cursor to avoid an <b>OutOfMemoryError</b>. Adaptive buffering provides the ability to do a forward-only read-only pass of an arbitrarily large result set without requiring a server cursor. <br />
+      </li><li>
+        
+          <b>The query produces very large </b>
+          <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a>
+          <b> columns or </b>
+          <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement</a>
+          <b> OUT parameter values:</b> The application can retrieve a single value (column or OUT parameter) that is too large to fit entirely in application memory. Adaptive buffering allows the client application to retrieve such a value as a stream, by using the <b>getAsciiStream</b>, the <b>getBinaryStream,</b> or the <b>getCharacterStream</b> methods. The application retrieves the value from the SQL Server as it reads from the stream.<br />
+        
+        <br />
+      </li></ul>
+    <div style="margin: .5em 1.5em .5em 1.5em"><b>Note: </b>
+      With adaptive buffering, the JDBC driver buffers only the amount of data that it has to. The driver does not provide any public method to control or limit the size of the buffer.<p />
+    </div>
+  </div><h1 class="heading">Setting Adaptive Buffering</h1><div id="sectionSection0" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">Starting with the JDBC driver version 2.0, the default behavior of the driver is "<b>adaptive</b>". In other words, in order to get the adaptive buffering behavior, your application does not have to request the adaptive behavior explicitly. In the version 1.2 release, however, the buffering mode was "<b>full</b>" by default and the application had to request the adaptive buffering mode explicitly.</p>
+      <p xmlns="">There are three ways that an application can request that statement execution should use adaptive buffering:</p>
+      <ul xmlns=""><li>
+          The application can set the connection property <b>responseBuffering</b> to "adaptive". For more information on setting the connection properties, see <a href="f1b62700-f046-488d-bd6b-a5cd8fc345b7.htm">Setting the Connection Properties</a>. <br />
+        </li><li>
+          The application can use the <a href="c9e43ff2-8117-4dca-982d-83c863d0c8e1.htm">setResponseBuffering</a> method of the <a href="097434fd-2b74-411c-a5ed-eba04481dde5.htm">SQLServerDataSource</a> object to set the response buffering mode for all connections created through that <a href="097434fd-2b74-411c-a5ed-eba04481dde5.htm">SQLServerDataSource</a> object.<br />
+        </li><li>
+          The application can use the <a href="9f489835-6cda-4c8c-b139-079639a169cf.htm">setResponseBuffering</a> method of the <a href="ec24963c-8b51-4838-91e9-1fbfa2347451.htm">SQLServerStatement</a> class to set the response buffering mode for a particular statement object. <br />
+        </li></ul>
+      <p xmlns="">When using the JDBC Driver version 1.2, applications needed to cast the statement object to a <a href="ec24963c-8b51-4838-91e9-1fbfa2347451.htm">SQLServerStatement</a> class to use the <a href="9f489835-6cda-4c8c-b139-079639a169cf.htm">setResponseBuffering</a> method. The code examples in the <a href="6c986144-3854-4352-8331-e79eccbefc28.htm">Reading Large Data Sample</a> and <a href="58c76635-a117-4661-8781-d6cb231c5809.htm">Reading Large Data with Stored Procedures Sample</a> demonstrate this old usage. </p>
+      <p xmlns="">However, with the JDBC driver version 2.0, applications can use the <a href="53f3291f-d43a-476b-a656-d86168dacf6c.htm">isWrapperFor</a> method and the <a href="ce680176-ef04-4e44-bb6c-ec50bd06e7e6.htm">unwrap</a> method to access the vendor-specific functionality without any assumption about the implementation class hierarchy. For example code, see the <a href="76ecc05f-a77d-40a2-bab9-91a7fcf17347.htm">Updating Large Data Sample</a> topic.</p>
+    </content></div><h1 class="heading">Retrieving Large Data with Adaptive Buffering</h1><div id="sectionSection1" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">When large values are read once by using the get&lt;Type&gt;Stream methods, and the ResultSet columns and the CallableStatement OUT parameters are accessed in the order returned by the SQL Server, adaptive buffering minimizes the application memory usage when processing the results. When using adaptive buffering:</p>
+      <ul xmlns=""><li>
+          The <b>get&lt;Type&gt;Stream</b> methods defined in the <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a> and <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement</a> classes return read-once streams by default, although the streams can be reset if marked by the application. If the application wants to <code>reset</code> the stream, it has to call the <code>mark</code> method on that stream first. <br />
+        </li><li>
+          The <b>get&lt;Type&gt;Stream</b> methods defined in the <a href="24170524-e1ab-4e80-8fd1-6688efacfbde.htm">SQLServerClob</a> and <a href="88bd8623-889d-4b5d-99ff-c85b32f3ff5c.htm">SQLServerBlob</a> classes return streams that can always be repositioned to the start position of the stream without calling the <code>mark</code> method. <br />
+        </li></ul>
+      <p xmlns="">When the application uses adaptive buffering, the values retrieved by the <b>get&lt;Type&gt;Stream</b> methods can only be retrieved once. If you try to call any <b>get&lt;Type&gt;</b> method on the same column or parameter after calling the <b>get&lt;Type&gt;Stream</b> method of the same object, an exception is thrown with the message, "The data has been accessed and is not available for this column or parameter".</p>
+    </content></div><h1 class="heading">Guidelines for Using Adaptive Buffering</h1><div id="sectionSection2" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">Developers should follow these important guidelines to minimize memory usage by the application:</p>
+      <ul xmlns=""><li>
+          Avoid using the connection string property <b>selectMethod=cursor</b> to allow the application to process a very large result set. The adaptive buffering feature allows applications to process very large forward-only, read-only result sets without using a server cursor. Note that when you set <b>selectMethod=cursor</b>, all forward-only, read-only result sets produced by that connection are impacted. In other words, if your application routinely processes short result sets with a few rows, creating, reading, and closing a server cursor for each result set will use more resources on both client-side and server-side than is the case where the <b>selectMethod</b> is not set to <b>cursor</b>.<br />
+        </li><li>
+          Read large text or binary values as streams by using the <b>getAsciiStream</b>, the <b>getBinaryStream,</b> or the <b>getCharacterStream</b> methods instead of the <b>getBlob</b> or the <b>getClob</b> methods. Starting with the version 1.2 release, the <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement</a> class provides new <b>get&lt;Type&gt;Stream</b> methods for this purpose.<br />
+        </li><li>
+          Ensure that columns with potentially large values are placed last in the list of columns in a SELECT statement and that the <b>get&lt;Type&gt;Stream</b> methods of the <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a> are used to access the columns in the order they are selected.<br />
+        </li><li>
+          Ensure that OUT parameters with potentially large values are declared last in the list of parameters in the SQL used to create the <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement</a>. In addition, ensure that the <b>get&lt;Type&gt;Stream</b> methods of the <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement</a> are used to access the OUT parameters in the order they are declared.<br />
+        </li><li>
+          Avoid executing more than one statement on the same connection simultaneously. Executing another statement before processing the results of the previous statement may cause the unprocessed results to be buffered into the application memory.<br />
+        </li><li>
+          There are some cases where using <b>selectMethod=cursor</b> instead of <b>responseBuffering=adaptive</b> would be more beneficial, such as:<br />
+          <ul><li>
+              If your application processes a forward-only, read-only result set slowly, such as reading each row after some user input, using <b>selectMethod=cursor</b> instead of <b>responseBuffering=adaptive</b> might help reduce resource usage by SQL Server. <br />
+            </li><li>
+              If your application processes two or more forward-only, read-only result sets at the same time on the same connection, using <b>selectMethod=cursor</b> instead of <b>responseBuffering=adaptive</b> might help reduce the memory required by the driver while processing these result sets.<br />
+            </li></ul>
+          In both cases, you need to consider the overhead of creating, reading, and closing the server cursors.<br />
+        </li></ul>
+      <p xmlns="">In addition, the following list provides some recommendations for scrollable and forward-only updatable result sets:</p>
+      <ul xmlns=""><li>
+          For scrollable result sets, when fetching a block of rows the driver always reads into memory the number of rows indicated by the <a href="7bc96930-b0c9-42f6-8df9-1d8d824408b3.htm">getFetchSize</a> method of the <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a> object, even when the adaptive buffering is enabled. If scrolling causes an <b>OutOfMemoryError</b>, you can reduce the number of rows fetched by calling the <a href="233bf4f8-4758-42d0-a80b-33e34fa78027.htm">setFetchSize</a> method of the <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a> object to set the fetch size to a smaller number of rows, even down to 1 row, if necessary. If this does not prevent an <b>OutOfMemoryError, </b>avoid including very large columns in scrollable result sets.<br />
+        </li><li>
+          For forward-only updatable result sets, when fetching a block of rows the driver normally reads into memory the number of rows indicated by the <a href="7bc96930-b0c9-42f6-8df9-1d8d824408b3.htm">getFetchSize</a> method of the <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a> object, even when the adaptive buffering is enabled on the connection. If calling the <a href="60248447-6908-4036-a779-a501453cd553.htm">next</a> method of the <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a> object results in an <b>OutOfMemoryError</b>, you can reduce the number of rows fetched by calling the <a href="233bf4f8-4758-42d0-a80b-33e34fa78027.htm">setFetchSize</a> method of the <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a> object to set the fetch size to a smaller number of rows, even down to 1 row, if necessary. You can also force the driver not to buffer any rows by calling the <a href="9f489835-6cda-4c8c-b139-079639a169cf.htm">setResponseBuffering</a> method of the <a href="ec24963c-8b51-4838-91e9-1fbfa2347451.htm">SQLServerStatement</a> object with "<b>adaptive</b>" parameter before executing the statement. Because the result set is not scrollable, if the application accesses a large column value by using one of the <b>get&lt;Type&gt;Stream</b> methods, the driver discards the value as soon as the application reads it just as it does for the forward-only read-only result sets.<br />
+        </li></ul>
+    </content></div><span id="seeAlsoSpan"><h1 class="heading">See Also</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection"><a href="e1592499-b87b-45ee-bab8-beaba8fde841.htm">Improving Performance and Reliability with the JDBC Driver</a><br /><br /></div><!--[if gte IE 5]>
+			<tool:tip element="seeAlsoToolTip" avoidmouse="false"/><tool:tip element="languageFilterToolTip" avoidmouse="false"/><tool:tip element="roleInfoSpan" avoidmouse="false"/>
+		<![endif]-->
+      <div id="footer" class="section">
+        
+		<hr />
+		
+		<span id="fb" class="feedbackcss">
+			
+			
+		</span>
+		
+		<a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">
+			
+			© 2010 Microsoft Corporation. All rights reserved.
+		</a>
+ 	
+	
+      </div>
+    </div>
+  </body>
+</html>

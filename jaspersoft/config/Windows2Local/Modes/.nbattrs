@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="bottomSlidingSide">
+        <attr name="WinSys-TCRef-Order" stringvalue=""/>
+    </fileobject>
+    <fileobject name="code_evaluator">
+        <attr name="WinSys-TCRef-Order" stringvalue="evaluator"/>
+    </fileobject>
+    <fileobject name="commonpalette">
+        <attr name="WinSys-TCRef-Order" stringvalue="CommonPalette/FormattingToolsTopComponent/CrosstabDebugConsoleTopComponent"/>
+        <attr name="_palette_visible_" boolvalue="true"/>
+        <attr name="_palette_visible_FormDesignerPalette" boolvalue="true"/>
+        <attr name="_palette_visible__empty_" boolvalue="false"/>
+        <attr name="_palette_visible_ireport/palette" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="editor">
+        <attr name="WinSys-TCRef-Order" stringvalue="HQLEditorTopComponent/CoverageReportTopComponent/dbgInstances/Welcome/WelcomeTopComponent/JRViewerTopComponent"/>
+    </fileobject>
+    <fileobject name="explorer">
+        <attr name="WinSys-TCRef-Order" stringvalue="projectTabLogical_tc/projectTab_tc/services/favorites/DashboardTopComponent/debugging/profiler_cp/RepositoryTopComponent/ASTBrowserTopComponent/GenericInspectorTopComponent/OutlineTopComponent/TokensBrowserTopComponent"/>
+    </fileobject>
+    <fileobject name="leftSlidingSide">
+        <attr name="WinSys-TCRef-Order" stringvalue="ResourceBundleTopComponent"/>
+    </fileobject>
+    <fileobject name="navigator">
+        <attr name="WinSys-TCRef-Order" stringvalue="navigatorTC"/>
+    </fileobject>
+    <fileobject name="output">
+        <attr name="WinSys-TCRef-Order" stringvalue="watchesView/NotificationCenterTopComponent/localsView/resultsView/callstackView/breakpointsView/classes/sources/sessionsView/threadsView/bookmarks/eventsView/profiler_to/profiler_pp/versioning_output/search-results/gsf-testrunner-results/refactoring-preview/find-usages/CallHierarchyTopComponent/AnalyzerTopComponent/JavadocTopComponent/TerminalContainerTopComponent/output/svnversioning/hgversioningTC/GitVersioning/GitRepositories/TaskListTopComponent/ReporterResultTopComponent/AnalysisResultTopComponent/ErrorHandlerTopComponent/IRConsoleTopComponent"/>
+    </fileobject>
+    <fileobject name="properties">
+        <attr name="WinSys-TCRef-Order" stringvalue="JavaHierarchyTopComponent/CssStylesTC/AnalyzeStackTopComponent/properties/StylesLibraryTopComponent"/>
+    </fileobject>
+    <fileobject name="rightSlidingSide">
+        <attr name="WinSys-TCRef-Order" stringvalue=""/>
+    </fileobject>
+    <fileobject name="topSlidingSide">
+        <attr name="WinSys-TCRef-Order" stringvalue=""/>
+    </fileobject>
+    <fileobject name="webpreview">
+        <attr name="WinSys-TCRef-Order" stringvalue=""/>
+    </fileobject>
+</attributes>

@@ -1,0 +1,110 @@
+
+
+   List of Fixes for EBF 20686
+   ---------------------------
+
+   Following is a list of fixes which are cumulative to this release.  Each
+   fix is listed along with the EBF in which it was first released and the
+   description of the problem. The list is sorted by the EBFID column.
+
+
+
+
+   EBFID   BugID      Description
+   -----   --------   -------------------------------------------------
+   20686   714096     jConnect: Executing a batch update
+                      PreparedStatement with DYNAMIC_PREPARE=false with
+                      numeric values may cause numeric overflow, JZ0BE
+                      exception.
+
+   20686   712354     jConnect: Request support for setClientInfo() and
+                      getClientInfo()API for SybConnectionProxy class.
+
+   20686   712293     jConnect: Using jConnect 7.07 to bulk insert rows
+                      in Adaptive Server versions earlier than 15.7
+                      results in JZBK7 exception.
+
+   20686   711929     jConnect: Performance regressions observed in Bulk
+                      Insert code path for jConnect 7.07 GA driver.
+
+   20686   711303     jConnect: Failed to insert into table with 663
+                      columns using PreparedStatement.
+
+   20686   710528     jConnect: Using qualified table names like
+                      dbo.table_name for Bulk Inserts raises exceptions.
+
+   20686   709763     jConnect: Bulk Insert writes wrong data value in
+                      non-APL tables if last column in the table is a
+                      variable length column.
+
+   20686   707235     jConnect: Clients redirected to another Cluster
+                      Edition instance not establishing the connection
+                      with server's default network packet size.
+
+   20686   705099     jConnect: Syntax error in metadata stored
+                      procedures raises Msg 105, "Unclosed quote before
+                      the character string..."
+
+   20686   701464     jConnect: Executing PreparedStatement with the
+                      QUERY that contains more than 500 parameters fails
+                      with: java.sql.SQLException: Message empty.
+
+   20686   699038     jConnect: Request to support timestamp data type
+                      for Bulk Insert.
+
+   20686   675144     jConnect: Using large number of parameters in
+                      PreparedStatement causes SQLExceptions like
+                      "Message empty." and/or "The token datastream
+                      length was not correct. This is an internal
+                      protocol error."
+
+   20144   711278     jConnect: Calling
+                      PreparedStatement.clearParameters() before
+                      PreparedStatement.executeBatch() is executed
+                      clears previously added parameter sets.
+
+   20144   707355     jConnect: Encountering
+                      java.lang.NullPointerException exception when
+                      connecting with connection property USE_METADATA
+                      set to false and CHARSET property set to utf8.
+
+   20144   704044     jConnect: NullPointerException is thrown while
+                      listing the available charsets.
+
+   20144   702747     jConnect: Request to add support for
+                      DatabaseMetaData.getClientInfoProperties().
+
+   20144   700592     jConnect: Calling
+                      PreparedStatement.clearParameters() before
+                      PreparedStatement.executeBatch() is executed
+                      clears previously added parameter sets.
+
+   20021   699564     jConnect: Incorrect major and minor version
+                      reported by getMajorVersion and getMinorVersion
+                      functions in DatabaseMetaData and Driver classes.
+                      The same incorrect versions are passed in the TDS
+                      login packet to the Server.
+
+   20021   691044     jConnect: The getGeneratedKeys() call to fetch
+                      generated keys does not work if called after
+                      Statement.execute().
+
+   20021   690228     jConnect: Request to provide an option to have
+                      Adaptive Server char() nullable column values not
+                      to be blank padded.
+
+   20021   688158     jConnect: Request to implement getClientInfo() and
+                      setClientInfo() API on the Connection object.
+
+   19793   667663     jConnect: Executing CallableStatement with float
+                      parameter values fails if "LITERAL_PARAMS=true"
+                      connection setting is in use.
+
+   19793   581419     jConnect: When the “ENABLE_BULK_LOAD” property is
+                      enabled on connection to SQLAnywhere or IQ
+                      database, misleading “JZ0SJ: Metadata accessor
+                      information was not found on this database” error
+                      is thrown.
+
+   19485   699889     jConnect: Initial GA release for jConnect 7.07.
+

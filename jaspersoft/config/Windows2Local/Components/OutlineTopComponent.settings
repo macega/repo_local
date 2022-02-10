@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+    <module name="com.jaspersoft.ireport/1" spec="1.0"/>
+    <instanceof class="com.jaspersoft.ireport.designer.outline.OutlineTopComponent"/>
+    <instanceof class="java.awt.Component"/>
+    <instanceof class="java.awt.Container"/>
+    <instanceof class="java.awt.MenuContainer"/>
+    <instanceof class="java.awt.image.ImageObserver"/>
+    <instanceof class="java.io.Externalizable"/>
+    <instanceof class="java.io.Serializable"/>
+    <instanceof class="java.lang.Object"/>
+    <instanceof class="javax.accessibility.Accessible"/>
+    <instanceof class="javax.swing.JComponent"/>
+    <instanceof class="javax.swing.TransferHandler$HasGetTransferHandler"/>
+    <instanceof class="org.openide.explorer.ExplorerManager$Provider"/>
+    <instanceof class="org.openide.util.HelpCtx$Provider"/>
+    <instanceof class="org.openide.util.Lookup$Provider"/>
+    <instanceof class="org.openide.windows.TopComponent"/>
+    <serialdata class="com.jaspersoft.ireport.designer.outline.OutlineTopComponent">
+        ACED00057372004C636F6D2E6A6173706572736F66742E697265706F72742E64657369676E65722E6F75746C696E652E4F75
+        746C696E65546F70436F6D706F6E656E74245265736F6C7661626C6548656C70657200000000000000010200007870
+    </serialdata>
+</settings>

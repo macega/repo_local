@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<!--
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<document>
+
+  <properties>
+    <title>Introduction</title>
+    <author email="hboutemy_AT_apache_DOT_org">Hervé Boutemy</author>
+  </properties>
+
+  <body>
+
+    <section name="Apache Maven 3.x">
+
+      <p>Maven is a project development management and
+    comprehension tool. Based on the concept of a project object model:
+    builds, dependency management, documentation creation, site
+    publication, and distribution publication are all controlled from
+    <a href="./maven-model/maven.html">the <code>pom.xml</code> declarative file</a>. Maven can be extended by
+    <a href="http://maven.apache.org/plugins/">plugins</a> to utilise a
+    number of other development tools for reporting or the build
+    process.</p>
+
+      <p>
+        <img src="images/maven-deps.png" width="784" height="595" border="0" usemap="#Maven_dependencies" />
+        <map name="Maven_dependencies">
+          <area shape="rect" coords="228,1,361,36"    alt="apache-maven"  href="apache-maven/" />
+          <area shape="rect" coords="228,58,361,95"   alt="maven-embedder" href="maven-embedder/" />
+          <area shape="rect" coords="228,116,361,152" alt="maven-compat" href="maven-compat/" />
+          <area shape="rect" coords="228,175,361,211" alt="maven-core" href="maven-core/" />
+          <area shape="rect" coords="118,233,275,269" alt="maven-aether-provider" href="maven-aether-provider/" />
+          <area shape="rect" coords="0,287,192,323"   alt="maven-repository-metadata" href="maven-repository-metadata/" />
+          <area shape="rect" coords="245,342,343,378" alt="maven-plugin-api" href="maven-plugin-api/" />
+          <area shape="rect" coords="253,401,336,436" alt="maven-artifact" href="maven-artifact/" />
+          <area shape="rect" coords="296,234,442,270" alt="maven-builder-support" href="maven-builder-support/" />
+          <area shape="rect" coords="382,176,528,211" alt="maven-settings-builder" href="maven-settings-builder/" />
+          <area shape="rect" coords="446,234,537,269" alt="maven-settings" href="maven-settings/" />
+          <area shape="rect" coords="388,284,521,319" alt="maven-model-builder" href="maven-model-builder/" />
+          <area shape="rect" coords="409,342,500,378" alt="maven-model" href="maven-model/" />
+          <area shape="rect" coords="551,58,707,94"   alt="commons-cli" href="http://commons.apache.org/cli/" />
+          <area shape="rect" coords="551,116,739,152" alt="wagon-provider-api" href="http://maven.apache.org/wagon/wagon-provider-api/" />
+          <area shape="rect" coords="550,175,690,211" alt="plexus-sec-dispatcher" href="http://plexus.codehaus.org/plexus-components/plexus-sec-dispatcher/project-reports.html" />
+          <area shape="rect" coords="581,230,660,265" alt="plexus-cipher" href="http://plexus.codehaus.org/plexus-components/plexus-cipher/project-reports.html" />
+          <area shape="rect" coords="551,284,707,320" alt="plexus-interpolation" href="http://plexus.codehaus.org/plexus-components/plexus-interpolation/" />
+          <area shape="rect" coords="551,359,776,395" alt="plexus-component-annotations" href="http://plexus.codehaus.org/plexus-containers/plexus-component-annotations/" />
+          <area shape="rect" coords="550,401,682,437" alt="plexus-classworlds" href="http://plexus.codehaus.org/plexus-classworlds/" />
+          <area shape="rect" coords="685,455,775,491" alt="plexus-utils" href="http://plexus.codehaus.org/plexus-utils/" />
+          <area shape="rect" coords="542,167,783,502" alt="plexus" href="http://plexus.codehaus.org/" />
+          <area shape="rect" coords="68,338,240,482"  alt="aether" href="http://www.eclipse.org/projects/project_summary.php?projectid=technology.aether" />
+          <area shape="rect" coords="388,393,520,594" alt="sisu" href="http://www.eclipse.org/projects/project_summary.php?projectid=technology.sisu" />
+          <area shape="rect" coords="519,518,621,554" alt="guice" href="http://code.google.com/p/google-guice/" />
+        </map>
+      </p>
+    </section>
+
+  </body>
+
+</document>

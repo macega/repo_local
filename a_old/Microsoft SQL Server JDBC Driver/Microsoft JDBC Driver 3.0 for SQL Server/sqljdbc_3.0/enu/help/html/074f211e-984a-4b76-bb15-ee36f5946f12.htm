@@ -1,0 +1,279 @@
+﻿<html DIR="LTR" xmlns:tool="http://www.microsoft.com/tooltip" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>What's New in the JDBC Driver</title>
+    
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css">
+      
+    </link>
+    
+    <script src="../local/script.js">
+      
+    </script><script src="../local/script_main.js">&amp;nbsp;</script>
+  </head>
+  <body>
+    <!--Topic built:03/26/2010 02:49:39-->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable"><tr>
+          <td align="left">
+            <span id="headerBold">What's New in the JDBC Driver</span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr></table>
+      
+      
+      
+    </div>
+    <div id="mainSection">
+      
+        
+        
+    <font color="DarkGray">
+      
+    </font>
+    <p />
+    
+    <p />
+  
+        <div id="introductionSection" class="section">
+    <p>The following sections discuss new features in the Microsoft SQL Server JDBC Driver.</p>
+  </div><h1 class="heading">What's New in the JDBC Driver Version 3.0</h1><div id="sectionSection0" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">
+        Microsoft SQL Server JDBC Driver 3.0 includes several new features and enhancements.</p>
+    </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <h1 class="heading" xmlns="">Driver Name</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">The new version of the JDBC driver is Microsoft SQL Server JDBC Driver 3.0.</p>
+        </content></div>
+      <h1 class="heading" xmlns="">Support for SQL Server 2008 Time and Date Data Types Introduced in SQL Server 2008</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">The Microsoft SQL Server JDBC Driver 3.0 now supports the following SQL Server data types:</p>
+          <ul xmlns=""><li>
+              
+                <b>time</b>
+              <br />
+            </li><li>
+              
+                <b>date</b>
+              <br />
+            </li><li>
+              
+                <b>datetime2</b>
+              <br />
+            </li><li>
+              
+                <b>datetimeoffset</b>
+              <br />
+            </li></ul>
+          <p xmlns="">For more information about these SQL Server types, see <a href="http://go.microsoft.com/fwlink/?LinkId=183664" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Date and Time Data Types and Functions (Transact-SQL)</linkText></a>.</p>
+          <p xmlns="">The <a href="20bbeacd-ccca-4a46-8184-ff941ae2ec5f.htm">DateTimeOffset Class</a> type is added, as well as functions that allow you to access values in a <b>datetimeoffset</b> column:</p>
+          <ul xmlns=""><li>
+              
+                <a href="7d9d7b05-582a-41df-b2c4-ec4a64d49752.htm">SQLServerCallableStatement.getDateTimeOffset</a>
+              <br />
+            </li><li>
+              
+                <a href="9383e14d-c83e-43c5-980c-50a3e0bedc31.htm">SQLServerCallableStatement.setDateTimeOffset</a>
+              <br />
+            </li><li>
+              
+                <a href="5014dba9-1755-4769-b070-6cbeecee864e.htm">SQLServerPreparedStatement.setDateTimeOffset</a>
+              <br />
+            </li><li>
+              
+                <a href="60ec0499-1c2a-4476-9e32-03b9d698fe54.htm">SQLServerResultSet.getDateTimeOffset</a>
+              <br />
+            </li><li>
+              
+                <a href="40d7fced-cce1-4534-b794-71bc735e53e0.htm">SQLServerResultSet.updateDateTimeOffset</a>
+              <br />
+            </li></ul>
+        </content></div>
+      <h1 class="heading" xmlns="">Configuring How java.sql.Time Values are Sent to the Server</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">The <b>sendTimeAsDatetime</b> connection property is added. <b>sendTimeAsDatetime</b> determines how a java.sql.Time value will be sent to the server, as a SQL Server <b>time</b> or <b>datetime</b> value.</p>
+          <p xmlns="">For information on using the <b>sendTimeAsDatetime</b> connection property, see <a href="f1b62700-f046-488d-bd6b-a5cd8fc345b7.htm">Setting the Connection Properties</a>.</p>
+          <p xmlns="">For more information about sending java.sql.Time types to the server, see <a href="07eb00dd-621a-46f9-a5a5-8cab4d6058b5.htm">Configuring How java.sql.Time Values are Sent to the Server</a>.</p>
+          <p xmlns="">You can programmatically modify the value of the <b>sendTimeAsDatetime</b> connection property with <a href="705a0494-b5e2-43db-940a-1b8cec550cdb.htm">SQLServerDataSource.setSendTimeAsDatetime</a>.</p>
+        </content></div>
+      <h1 class="heading" xmlns="">Full Support for MERGE Operations</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">The following methods now return the correct number of rows updated for a MERGE operation:</p>
+          <ul xmlns=""><li>
+              
+                <a href="10ae662a-ce3c-4b24-875c-5c2df319d93b.htm">SQLServerStatement.executeUpdate</a>
+              <br />
+            </li><li>
+              
+                <a href="e9570228-4500-44b6-b2f1-84ac050b5112.htm">SQLServerStatement.getUpdateCount</a>
+              <br />
+            </li><li>
+              
+                <a href="677b0907-316e-40f2-a0d9-d4d0872c7f52.htm">SQLServerPreparedStatement.executeUpdate</a>
+              <br />
+            </li><li>
+              SQLServerPreparedStatement.getUpdateCount (inherited from SQLServerStatement)<br />
+            </li><li>
+              SQLServerCallableStatement.executeUpdate (inherited from SQLServerPreparedStatement)<br />
+            </li><li>
+              SQLServerPreparedStatement.getUpdateCount (inherited from SQLServerStatement)<br />
+            </li></ul>
+        </content></div>
+      <h1 class="heading" xmlns="">getBytes, setBytes, and updateBytes not Supported with Date and Time Types</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">In the Microsoft SQL Server JDBC Driver 2.0, you could use <a href="b6e88cea-54b3-4d18-a9af-db54abf19f45.htm">SQLServerCallableStatement.getBytes</a>, <a href="f264f1a6-ee35-4eaf-81d8-ecf99f03b35d.htm">SQLServerCallableStatement.setBytes</a>, <a href="d16a0aea-6144-4fcb-bcbc-5d7daa36d327.htm">SQLServerResultSet.getBytes</a>, or <a href="3050c836-fbb3-4475-99e5-05637a48a932.htm">SQLServerResultSet.updateBytes</a> to convert values between byte arrays and SQL Server data type <b>date</b>, <b>time</b>, <b>datetime2</b>, or<b> datetimeoffset</b>. In SQL Server JDBC Driver 3.0, using those methods with those data types will cause an exception indicating that the conversion is not supported.</p>
+        </content></div>
+      <h1 class="heading" xmlns="">getObject Returns Date or Time Object</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">In the Microsoft SQL Server JDBC Driver 2.0, when you used <a href="c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad.htm">SQLServerCallableStatement.getObject</a> or <a href="924df406-14b2-40b8-a7bc-c2fd145d7d7c.htm">SQLServerResultSet.getObject</a> to retrieve a value of type date, time, datetime2, or datetimeoffset, an object of type java.lang.String was returned.</p>
+          <p xmlns="">In the SQL Server JDBC Driver 3.0:</p>
+          <ul xmlns=""><li>
+              A value of type date will be returned as a java.sql.Date object.<br />
+            </li><li>
+              A value of type time will be returned as a java.sql.Time object.<br />
+            </li><li>
+              A value of type datetime2 will be returned as a java.sql.Timestamp object.<br />
+            </li><li>
+              A value of type datetimeoffset will be returned as a microsoft.sql.DateTimeOffset object.<br />
+            </li></ul>
+        </content></div>
+      <h1 class="heading" xmlns="">Column Behavior Change</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">SQLServerDatabaseMetaData.getColumns will return different values from previous versions of the driver for some columns in SQL Server JDBC Driver 3.0. See <a href="f173fa5d-e114-4a37-a5c4-2baad9ff3af1.htm">SQLServerDatabaseMetaData.getColumns</a> for more information.</p>
+          <p xmlns="">The following methods in SQLServerResultSetMetaData also have behavior changes:</p>
+          <ul xmlns=""><li>
+              
+                <a href="21c25443-bd2b-4b60-9798-4efe2c158952.htm">SQLServerResultSetMetaData.getColumnDisplaySize</a>
+              <br />
+            </li><li>
+              
+                <a href="81815a41-9265-4574-a4d8-f6341a68d9fd.htm">SQLServerResultSetMetaData.getColumnType</a>
+              <br />
+            </li><li>
+              
+                <a href="a444da82-c1af-40a5-9774-02476416c92c.htm">SQLServerResultSetMetaData.getColumnTypeName</a>
+              <br />
+            </li><li>
+              
+                <a href="fe29aa5f-4cc5-413f-8bbd-a58064993d87.htm">SQLServerResultSetMetaData.getScale</a>
+              <br />
+            </li></ul>
+        </content></div>
+      <h1 class="heading" xmlns="">Interfaces</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">The following interfaces are added:</p>
+          <ul xmlns=""><li>
+              
+                <a href="030a1631-cfcd-41e0-beb5-47f93c01e8e0.htm">ISQLServerCallableStatement</a>
+              <br />
+            </li><li>
+              
+                <a href="031c01e2-2c65-4fe4-9700-fdbcc7a39f30.htm">ISQLServerConnection</a>
+              <br />
+            </li><li>
+              
+                <a href="ba1d3242-19ca-4321-83fe-867a4f69f1d4.htm">ISQLServerDataSource</a>
+              <br />
+            </li><li>
+              
+                <a href="cf87892e-5c34-4ac6-8258-c2a81e117b26.htm">ISQLServerPreparedStatement</a>
+              <br />
+            </li><li>
+              
+                <a href="002496f7-8ec0-4267-b4e6-ba095e2ef306.htm">ISQLServerResultSet</a>
+              <br />
+            </li><li>
+              
+                <a href="7f83b514-6e76-4f37-baf3-a10db2010e7c.htm">ISQLServerStatement</a>
+              <br />
+            </li></ul>
+          <p xmlns="">For more information, see <a href="27fc9b72-9f21-4728-abcb-5c015f28a6ab.htm">Wrappers and Interfaces</a>.</p>
+        </content></div>
+      <h1 class="heading" xmlns="">Intention to Deprecate Class Constructors</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">In the SQL Server JDBC Driver 3.0 release, Microsoft announces its intention to deprecate in a future release the constructors in several classes. Microsoft does not want developers to directly instantiate instances of these types.</p>
+          <p xmlns="">The constructors for these classes are not deprecated in the SQL Server JDBC Driver 3.0 release.</p>
+          <p xmlns="">In the SQL Server JDBC Driver 3.0 release, the following classes have corresponding interfaces. If you need to access a driver-specific method or constant, use the interface instead of the class:</p>
+          <ul xmlns=""><li>
+              
+                <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement Class</a> (corresponding interface is <a href="030a1631-cfcd-41e0-beb5-47f93c01e8e0.htm">ISQLServerCallableStatement Interface</a>)<br />
+            </li><li>
+              
+                <a href="937292a6-1525-423e-a2b2-a18fd34c2893.htm">SQLServerConnection Class</a> (corresponding interface is <a href="031c01e2-2c65-4fe4-9700-fdbcc7a39f30.htm">ISQLServerConnection Interface</a>)<br />
+            </li><li>
+              
+                <a href="a8481c06-fbba-432b-8c69-4f4619c20ad4.htm">SQLServerPreparedStatement Class</a> (corresponding interface is <a href="cf87892e-5c34-4ac6-8258-c2a81e117b26.htm">ISQLServerPreparedStatement Interface</a>)<br />
+            </li><li>
+              
+                <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet Class</a> (corresponding interface is <a href="002496f7-8ec0-4267-b4e6-ba095e2ef306.htm">ISQLServerResultSet Interface</a>)<br />
+            </li><li>
+              
+                <a href="ec24963c-8b51-4838-91e9-1fbfa2347451.htm">SQLServerStatement Class</a> (corresponding interface is <a href="7f83b514-6e76-4f37-baf3-a10db2010e7c.htm">ISQLServerStatement Interface</a>)<br />
+            </li></ul>
+          <p xmlns="">The constructors of the following classes will be deprecated in a future release and do not have corresponding interfaces because these classes do not expose SQL Server specific functions:</p>
+          <ul xmlns=""><li>
+              
+                <a href="8b8049d0-8c6d-4476-866b-098709f37eec.htm">SQLServerDatabaseMetaData</a>
+              <br />
+            </li><li>
+              
+                <a href="af5ef257-7cf6-4db3-b1ee-07d22d82bef1.htm">SQLServerException</a>
+              <br />
+            </li><li>
+              
+                <a href="546290e0-9411-4a2b-aa36-61251e70e9cf.htm">SQLServerParameterMetaData</a>
+              <br />
+            </li><li>
+              
+                <a href="4c87e9d3-904a-4b86-90cc-3684034c86ee.htm">SQLServerPooledConnection</a>
+              <br />
+            </li><li>
+              
+                <a href="9a36885f-83f3-44af-85f0-2b849dfd20d4.htm">SQLServerResultSetMetaData</a>
+              <br />
+            </li><li>
+              
+                <a href="1ae7db7b-959f-4142-8d9f-aa427869c6ac.htm">SQLServerSavepoint</a>
+              <br />
+            </li><li>
+              
+                <a href="5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2.htm">SQLServerXAConnection</a>
+              <br />
+            </li></ul>
+        </content></div>
+      <h1 class="heading" xmlns="">SQLServerDataSource.getReference No Longer Contains the Password or trustStorePassword</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">Prior to JDBC Driver 3.0, if <a href="0db06631-5e68-488c-a9f1-6e5052c0759d.htm">SQLServerDataSource.setPassword</a> was called on a <b>SQLServerDataSource</b> object, the password would be present in the object returned by <a href="b3fb1a97-86ee-4977-adca-c35ae199dbb3.htm">SQLServerDataSource.getReference</a>, allowing the object to be used to make additional connections. In JDBC Driver 3.0, you will need to set the password on the object returned by <b>SQLServerDataSource.getReference</b> before you make connections with the object.</p>
+          <p xmlns="">Also, if you set <a href="fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f.htm">SQLServerDataSource.setTrustStorePassword</a> before binding the data source properties, you must call <b>SQLServerDataSource.setTrustStorePassword</b> before getting the connection. For more information, see <b>SQLServerDataSource.getReference</b>.</p>
+        </content></div>
+      <h1 class="heading" xmlns="">Sparse Column Support</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">The SQL Server JDBC Driver 3.0 supports sparse columns when you connect to a SQL Server 2008 (or later) server. For more information, see <a href="7d4237e0-818f-4639-9093-d5ac9683fc71.htm">Sparse Columns</a>.</p>
+        </content></div>
+      <h1 class="heading" xmlns="">Large User-Defined Types (UDTs)</h1><div id="sectionSection" class="section" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">Support has been added for UDTs larger than 8 kilobytes. For more information, see <a href="19a71b27-b788-43a3-a76d-fe3001a6f016.htm">User Defined Types</a>.</p>
+        </content></div>
+    </sections></div><span id="seeAlsoSpan"><h1 class="heading">See Also</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection"><a href="939a8773-2583-49a4-bf00-6b892fbe39dc.htm">Overview of the JDBC Driver</a><br /><br /></div><!--[if gte IE 5]>
+			<tool:tip element="seeAlsoToolTip" avoidmouse="false"/><tool:tip element="languageFilterToolTip" avoidmouse="false"/><tool:tip element="roleInfoSpan" avoidmouse="false"/>
+		<![endif]-->
+      <div id="footer" class="section">
+        
+		<hr />
+		
+		<span id="fb" class="feedbackcss">
+			
+			
+		</span>
+		
+		<a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">
+			
+			© 2010 Microsoft Corporation. All rights reserved.
+		</a>
+ 	
+	
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.netbeans.org/ns/library-declaration/3" version="3.0">
+    <name>Microsoft_SQL_Server_JDBC_Driver</name>
+    <type>j2se</type>
+    <display-name>Microsoft_SQL_Server_JDBC_Driver</display-name>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/C:/Fontes/lib_java/Microsoft%20SQL%20Server%20JDBC%20Driver/sqljdbc_4.0/enu/sqljdbc4.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/C:/Fontes/lib_java/Microsoft%20SQL%20Server%20JDBC%20Driver/sqljdbc_4.0/enu/help/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+    <properties/>
+</library>

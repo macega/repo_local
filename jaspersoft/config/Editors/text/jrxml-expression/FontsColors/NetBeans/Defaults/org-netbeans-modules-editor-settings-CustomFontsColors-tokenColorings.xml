@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor foreColor="blue" name="object_V">
+        <font style="bold"/>
+    </fontcolor>
+    <fontcolor default="error" name="error"/>
+    <fontcolor foreColor="ffb20000" name="object_P">
+        <font style="bold"/>
+    </fontcolor>
+    <fontcolor default="char" name="char"/>
+    <fontcolor foreColor="ffce7b66" name="object_R">
+        <font style="bold"/>
+    </fontcolor>
+    <fontcolor foreColor="ff0000e6" name="keyword"/>
+    <fontcolor name="GAP"/>
+    <fontcolor default="whitespace" name="whitespace"/>
+    <fontcolor default="number" name="number"/>
+    <fontcolor default="operator" name="operator"/>
+    <fontcolor name="character"/>
+    <fontcolor name="invalid_keyword" strikeThrough="ff770000"/>
+    <fontcolor foreColor="ff00b200" name="object_F">
+        <font style="bold"/>
+    </fontcolor>
+    <fontcolor foreColor="ffce7b66" name="string"/>
+    <fontcolor name="PE"/>
+    <fontcolor foreColor="ffec2d2d" name="invalid_object">
+        <font style="bold"/>
+    </fontcolor>
+    <fontcolor default="comment" name="comment"/>
+    <fontcolor default="identifier" name="identifier"/>
+</fontscolors>

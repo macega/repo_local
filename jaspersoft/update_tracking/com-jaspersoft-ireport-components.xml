@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.jaspersoft.ireport.components">
+    <module_version install_time="1383762334098" last="true" origin="jasperreports-components-plugin-5.5.0.nbm" specification_version="1.0">
+        <file crc="1770979053" name="config/Modules/com-jaspersoft-ireport-components.xml"/>
+        <file crc="222727169" name="modules/com-jaspersoft-ireport-components.jar"/>
+        <file crc="1017075388" name="modules/ext/jasperreports-core-renderer.jar"/>
+        <file crc="1489021967" name="modules/ext/jasperreports-htmlcomponent-4.7.1.jar"/>
+        <file crc="2728662316" name="modules/ext/jasperreports-htmlcomponent-5.0.1.jar"/>
+        <file crc="3563102513" name="modules/ext/jasperreports-jtidy-r938.jar"/>
+    </module_version>
+</module>

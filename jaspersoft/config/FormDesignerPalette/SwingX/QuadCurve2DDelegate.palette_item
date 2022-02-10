@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<palette_item version="1.0">
+  <component classname="org.jdesktop.swingx.editors.PainterPropertyEditor.QuadCurve2DDelegate" />
+  <classpath>
+      <resource type="library" name="swingx" />
+  </classpath>
+</palette_item>

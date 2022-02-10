@@ -1,0 +1,37 @@
+#!/bin/sh
+
+if [ -z "$JAVA_HOME" ]
+then
+      echo "You must set the JAVA_HOME environment variable in order to run Ribo".
+      exit
+fi
+
+if [ -z  "$RIBO_HOME" ]
+then
+      echo "You must set the RIBO_HOME environment variable in order to run Ribo".
+      exit
+fi
+
+
+# JDK 1.1.x CLASSPATH
+CLASSPATH=${RIBO_HOME}/ribo.jar:${JAVA_HOME}/lib/classes.zip:.
+ 
+if [ -x ${JAVA_HOME}/bin/java ]
+then
+      JAVA=${JAVA_HOME}/bin/java
+      if [ -f ${JAVA_HOME}/lib/tools.jar ]
+      then
+
+        # This is JDK 1.2 or higher
+        CLASSPATH=${RIBO_HOME}/ribo.jar:.
+      fi
+elif [ -x $JAVA_HOME/bin/jre ]
+     then
+         JAVA=${JAVA_HOME}/bin/jre
+         CLASSPATH=${RIBO_HOME}/ribo.jar:${RIBO_HOME}/ribo.jar:${JAVA_HOME}/lib/rt.jar:${JAVA_HOME}/lib/i8n.jar:.
+
+else
+    echo "$JAVA_HOME is not a recognized Java installation.  Make sure \$JAVA_HOME is correctly set."
+    exit 1
+fi
+${JAVA} -classpath ${CLASSPATH} com.sybase.ribo.RiboMgr $*

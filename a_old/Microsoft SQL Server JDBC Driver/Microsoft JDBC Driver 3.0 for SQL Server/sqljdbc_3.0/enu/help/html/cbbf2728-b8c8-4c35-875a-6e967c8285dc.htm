@@ -1,0 +1,155 @@
+﻿<html DIR="LTR" xmlns:tool="http://www.microsoft.com/tooltip" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>unwrap Method (SQLServerCallableStatement)</title>
+    
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css">
+      
+    </link>
+    
+    <script src="../local/script.js">
+      
+    </script><script src="../local/script_main.js">&amp;nbsp;</script>
+  </head>
+  <body>
+    <!--Topic built:03/26/2010 02:49:39-->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable"><tr>
+          <td align="left">
+            <span id="headerBold">unwrap Method (SQLServerCallableStatement)</span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr></table>
+      
+      
+      
+    </div>
+    <div id="mainSection">
+      
+        
+        
+    <font color="DarkGray">
+      
+    </font>
+    <p />
+    
+    <p />
+  
+        <div id="introductionSection" class="section">
+    <p>Returns an object that implements the specified interface to allow access to the Microsoft SQL Server JDBC Driver-specific methods.</p>
+    <div style="margin: .5em 1.5em .5em 1.5em"><b>Note: </b>
+      This feature is introduced starting with the Microsoft SQL Server JDBC Driver version 2.0.<p />
+    </div>
+  </div><h1 class="heading">Syntax</h1><div id="syntaxSection" class="section"><div class="sampleCode"><span codeLanguage="other"><pre>
+public &lt;T&gt; T <b>unwrap</b>(Class&lt;T&gt; <i>iface</i>)</pre></span></div><h1 class="heading">Parameters</h1><div id="parametersSection" class="section" name="collapseableSection">
+    <content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">
+        <i>iface</i>
+      </p>
+      <p xmlns="">A class of type <b>T</b> defining an interface.</p>
+    </content>
+  </div></div><h1 class="heading">Return Value</h1><div id="returnValueSection" class="section" name="collapseableSection">
+    <content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">An object that implements the specified interface. </p>
+    </content>
+  </div><h1 class="heading">Exceptions</h1><div id="exceptionsSection" class="section" name="collapseableSection">
+    <content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">
+        <a href="af5ef257-7cf6-4db3-b1ee-07d22d82bef1.htm">SQLServerException</a>
+      </p>
+    </content>
+  </div><h1 class="heading">Remarks</h1><div id="remarksSection" class="section" name="collapseableSection">
+    <content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">The <a href="cbbf2728-b8c8-4c35-875a-6e967c8285dc.htm">unwrap</a> method is defined by the java.sql.Wrapper interface, which is introduced in the JDBC 4.0 Spec.</p>
+      <p xmlns="">Applications might need to access extensions to the JDBC API that are specific to the Microsoft SQL Server JDBC Driver. The <b>unwrap</b> method supports unwrapping to public classes that this object extends, if the classes expose vendor extensions. </p>
+      <p xmlns="">
+        <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement</a> implements <a href="a8481c06-fbba-432b-8c69-4f4619c20ad4.htm">ISQLServerPreparedStatement</a>, which is extended from the <a href="ec24963c-8b51-4838-91e9-1fbfa2347451.htm">ISQLServerStatement</a>. When this method is called, the object unwraps to the following classes: <a href="ec24963c-8b51-4838-91e9-1fbfa2347451.htm">SQLServerStatement</a>, <a href="a8481c06-fbba-432b-8c69-4f4619c20ad4.htm">SQLServerPreparedStatement</a>, and <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement</a>.</p>
+      <p xmlns="">For more information, see <a href="27fc9b72-9f21-4728-abcb-5c015f28a6ab.htm">Wrappers and Interfaces</a>.</p>
+      <p xmlns="">The following code example demonstrates how to use the <b>isWrapperFor</b> and <b>unwrap</b> methods to check the driver extensions and invoke the vendor-specific methods, such as <a href="9f489835-6cda-4c8c-b139-079639a169cf.htm">setResponseBuffering</a> and <a href="a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865.htm">getResponseBuffering</a>.</p>
+      <div class="sampleCode" xmlns=""><span codeLanguage="other"><pre>public static void executeStoredProcedure(Connection con) {
+   try {
+    CallableStatement cstmt = 
+       con.prepareCall("{call dbo.stored_proc_name(?, ?)}");
+    
+    // The recommended way to access the Microsoft SQL Server JDBC 
+    // Driver-specific methods is to use the JDBC 4.0 Wrapper 
+    // functionality. 
+    // The following code statements demonstrates how to use the 
+    // isWrapperFor and unwrap methods
+    // to access the driver-specific response buffering methods.
+
+    if (cstmt.isWrapperFor(
+      com.microsoft.sqlserver.jdbc.SQLServerCallableStatement.class)) {
+     // The CallableStatement object can unwrap to 
+     // SQLServerCallableStatement.
+     SQLServerCallableStatement SQLcstmt = 
+     cstmt.unwrap(
+        com.microsoft.sqlserver.jdbc.SQLServerCallableStatement.class);
+     SQLcstmt.setResponseBuffering("adaptive");
+     System.out.println("Response buffering mode has been set to " +
+         SQLcstmt.getResponseBuffering());
+     }
+     
+    if (cstmt.isWrapperFor(
+      com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.class)) {
+      // The CallableStatement object can unwrap to 
+      // SQLServerPreparedStatement.                  
+      SQLServerPreparedStatement SQLpstmt = 
+       cstmt.unwrap(
+       com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.class);
+      SQLpstmt.setResponseBuffering("adaptive");
+      System.out.println("Response buffering mode has been set to " +
+          SQLpstmt.getResponseBuffering());
+    }
+    if (cstmt.isWrapperFor(
+      com.microsoft.sqlserver.jdbc.SQLServerStatement.class)) {
+
+      // The CallableStatement object can unwrap to SQLServerStatement. 
+      SQLServerStatement SQLstmt = 
+        cstmt.unwrap(
+        com.microsoft.sqlserver.jdbc.SQLServerStatement.class);
+      SQLstmt.setResponseBuffering("adaptive");
+      System.out.println("Response buffering mode has been set to " +
+      SQLstmt.getResponseBuffering());
+    }
+  }
+  catch (Exception e) {
+     e.printStackTrace();
+  }
+} </pre></span></div>
+    </content>
+  </div><span id="seeAlsoSpan"><h1 class="heading">See Also</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection"><a href="71156863-3588-453e-b5a5-0573b2c1bebf.htm">isWrapperFor Method (SQLServerCallableStatement)</a><br /><a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement Class</a><br /><a href="5ebdc186-e50f-4d14-bbf4-95af5051e4a4.htm">SQLServerCallableStatement Members</a><br /><br /></div><!--[if gte IE 5]>
+			<tool:tip element="seeAlsoToolTip" avoidmouse="false"/><tool:tip element="languageFilterToolTip" avoidmouse="false"/><tool:tip element="roleInfoSpan" avoidmouse="false"/>
+		<![endif]-->
+      <div id="footer" class="section">
+        
+		<hr />
+		
+		<span id="fb" class="feedbackcss">
+			
+			
+		</span>
+		
+		<a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">
+			
+			© 2010 Microsoft Corporation. All rights reserved.
+		</a>
+ 	
+	
+      </div>
+    </div>
+  </body>
+</html>
